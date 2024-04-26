@@ -8,12 +8,17 @@
 </head>
 <body>
     <div id="container">
-        <h1>Vem känner du?</h1>  
-        <h1>Hur kom du hit</h1>
-        <h1>Vill du ta dig vidare</h1>
-        <h2>Skriv Namnet</h2>
+        <div>Vem bjöd dig?</div>
         <input type="text">
+        <p id="text1"></p>
+        <p id="text2"></p>
     </div>
+    <script>
+        // JavaScript to set focus on the input field when the page loads
+        window.onload = function() {
+            document.querySelector("input").focus();
+        };
+        </script>
     <script src="/startPage/index.js"></script>
 </body>
 </html>

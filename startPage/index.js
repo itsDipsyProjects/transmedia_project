@@ -32,7 +32,7 @@ async function who_do_you_know(names) {
                 console.log(data);
 
                 if(data === "Allowed"){
-                    window.location.replace("http://localhost:4000/canvastest/index.html");
+                    window.location.replace("http://localhost:4000/firstStation/index.html");
                 }
             }
             the_input.value = "";

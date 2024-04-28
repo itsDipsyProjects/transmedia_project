@@ -1,6 +1,6 @@
 
 
-function load(){    
+function loadFirstPage(){    
     console.log(playClickCounter)
     let container = document.querySelector("#container");
     container.innerHTML = `
@@ -32,10 +32,10 @@ function load(){
         back_btn.textContent = "back";
 
         back_btn.addEventListener("click", () => {
-            load();
+            loadFirstPage();
         });
     });
   
 }
 
-load();
+loadFirstPage();

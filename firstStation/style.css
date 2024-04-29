@@ -112,10 +112,10 @@ button{
 #picture{
     width: 250px;
     height: 200px;
-    background-image: url("../media/Group\ 4.png");
+    background-color: grey;
     background-position: center;
     background-size: cover;
-
+    
 
 }
 

@@ -68,3 +68,94 @@ button{
     border-radius: 0;
     font-size: 18px;
 }
+
+
+#windows_container{
+    width: 350px;
+    height: 400px;
+    background-color: #B9B8B6;
+    border-top: 2px solid rgb(207, 207, 207);
+    border-left: 2px solid rgb(207, 207, 207);
+    border-right: 2px solid rgb(137, 137, 137);
+    border-bottom: 2px solid rgb(137, 137, 137);
+}
+
+#top_blue_border{
+    width: 100%;
+    height: 25px;
+    background-color:blue ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#rubrik{
+    padding: 5px;
+    color: white;
+}
+
+#icon{
+    width: 22px;
+    height: 20px;
+    background-image: url("../media/smiley\ box.png");
+    background-position: center;
+    background-size: cover;
+    margin: 5px;
+}
+#pictures_container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#picture{
+    width: 250px;
+    height: 200px;
+    background-image: url("../media/Group\ 4.png");
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+#arrows{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+#back_arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 50px;
+    height: 25px;
+    font-size: 25px;
+
+
+    background-color: #B9B8B6;
+    border-top: 2px solid rgb(207, 207, 207);
+    border-left: 2px solid rgb(207, 207, 207);
+    border-right: 2px solid rgb(137, 137, 137);
+    border-bottom: 2px solid rgb(137, 137, 137);
+}
+
+#next_arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    width: 50px;
+    height: 25px;
+    font-size: 25px;
+
+    background-color: #B9B8B6;
+    border-top: 2px solid rgb(207, 207, 207);
+    border-left: 2px solid rgb(207, 207, 207);
+    border-right: 2px solid rgb(137, 137, 137);
+    border-bottom: 2px solid rgb(137, 137, 137);
+}

@@ -26,7 +26,23 @@ function loadFirstPage(){
     let firstPartDom = document.querySelector("#firstPart");
     
     btn_to_bilder.addEventListener("click", () => {
-        firstPartDom.innerHTML = ``;
+        firstPartDom.innerHTML = `
+            <img id="title" src="../media/Group 18.png" alt="">
+            <div id="windows_container">
+                <div id="top_blue_border">
+                    <div id="rubrik">Bilder</div>
+                    <div id="icon"></div>
+                </div>
+                <div id="pictures_container">
+                    <div id="picture"></div>
+                </div>
+                <div id="arrows">
+                    <div id="back_arrow">&#8592;</div>
+                    <div id="info_of_page">Page 1/4</div>
+                    <div id="next_arrow">&#8594;</div>
+                </div>
+            </div>
+        `;
         let back_btn = btn_to_bilder;
         back_btn.id = "back";
         back_btn.textContent = "back";
@@ -36,6 +52,10 @@ function loadFirstPage(){
         });
     });
   
+}
+
+function changePictures(){
+
 }
 
 loadFirstPage();

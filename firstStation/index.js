@@ -108,4 +108,8 @@ function changePictures(){
 
 }
 
+function quizFunctionality(){
+    
+}
+
 loadFirstPage();

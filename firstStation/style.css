@@ -159,3 +159,26 @@ button{
     border-right: 2px solid rgb(137, 137, 137);
     border-bottom: 2px solid rgb(137, 137, 137);
 }
+
+#question_container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+p{
+    margin: 20px;
+}
+
+input{
+    margin: 20px;
+    width: 200px;
+    height: 40px;
+}
+
+#skicka{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    margin: 20px;
+}

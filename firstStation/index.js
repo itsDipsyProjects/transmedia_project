@@ -1,6 +1,8 @@
+import { initCanvas } from "./canvas.js";
+import { quizFunctionality } from "./canvas.js";
 
 
-function loadFirstPage(){    
+export function loadFirstPage(){    
     console.log(playClickCounter)
     let container = document.querySelector("#container");
     if(quizReady === true){
@@ -49,6 +51,14 @@ function loadFirstPage(){
     let btn_to_bilder = document.querySelector("#to_bilder");
     let firstPartDom = document.querySelector("#firstPart");
     
+    if(quizReady === true){
+        let toQuizBtn = document.querySelector("#to_quiz");
+        console.log(toQuizBtn);
+        toQuizBtn.addEventListener("click", () => {
+            quizFunctionality();
+        })    
+    }
+
     btn_to_bilder.addEventListener("click", () => {
         firstPartDom.innerHTML = `
             <img id="title" src="../media/Group 18.png" alt="">

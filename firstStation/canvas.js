@@ -1,4 +1,6 @@
-function initCanvas(){
+import { loadFirstPage } from "./index.js";
+
+export function initCanvas(){
     const canvas = document.querySelector('canvas');
 
     // Get the 2D rendering context
@@ -115,7 +117,7 @@ function initCanvas(){
     };
 }
 
-function quizFunctionality(){
+export function quizFunctionality(){
     let container = document.querySelector("#container");
     container.innerHTML = `
     
@@ -135,7 +137,8 @@ function quizFunctionality(){
 
     `;
     initCanvas();
-
+    let question1 = "vad beställde man för att komma in på kinesen";
+    let answer1 = "två ljumma prips blå";
     let btn_to_bilder = document.querySelector("#to_bilder");
     let firstPartDom = document.querySelector("#firstPart");
     firstPartDom.innerHTML = `
@@ -145,11 +148,27 @@ function quizFunctionality(){
                 <div id="rubrik">Quiz</div>
                 <div id="icon"></div>
             </div>
+            <div id="question_container">
+                <p>${question1}</p>
+                <input type="text">
+                <button id="skicka">Skicka in</button>
+            </div>
         </div>
     `;
     let back_btn = btn_to_bilder;
     back_btn.id = "back";
     back_btn.textContent = "back";
+
+    let skickaBtn = document.querySelector("#skicka");
+    let inputValue = document.querySelector("input");
+    console.log(skickaBtn);
+
+    
+    skickaBtn.addEventListener("click", () => {
+        if(inputValue.value === answer1){
+            window.location.replace("http://localhost:4000/firstStation/finished/")
+        }
+    })
 
     back_btn.addEventListener("click", () => {
         loadFirstPage();

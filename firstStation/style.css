@@ -45,7 +45,7 @@ body{
 
 #container_for_cig_and_btn{
     width: 100vw;
-    height: 400px;
+    height: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,7 +71,7 @@ button{
 
 
 #windows_container{
-    width: 350px;
+    width: 430px;
     height: 400px;
     background-color: #B9B8B6;
     border-top: 2px solid rgb(207, 207, 207);
@@ -110,8 +110,8 @@ button{
     align-items: center;
 }
 #picture{
-    width: 250px;
-    height: 200px;
+    width: 350px;
+    height: 280px;
     background-color: grey;
     background-position: center;
     background-size: cover;

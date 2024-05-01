@@ -3,8 +3,30 @@
 function loadFirstPage(){    
     console.log(playClickCounter)
     let container = document.querySelector("#container");
-    container.innerHTML = `
+    if(quizReady === true){
+        container.innerHTML = `
+        
+            <div id="firstPart">
+                <img id="title" src="../media/Group 18.png" alt="">
+                <canvas id="myCanvas" ></canvas>
+            </div>
+            <div id="secondPart">
+                <div id="container_for_cig_and_btn">
+                    <div id="cigarets"></div>
+                    <div id="container_for_btn">
+                        <button id="to_quiz">Quiz</button>
+                        <button id="to_bilder">Bilder</button>
+                    </div>
+                </div>
+            </div>
     
+    
+        `;
+
+    }
+    else{
+        container.innerHTML = `
+        
         <div id="firstPart">
             <img id="title" src="../media/Group 18.png" alt="">
             <canvas id="myCanvas" ></canvas>
@@ -20,6 +42,8 @@ function loadFirstPage(){
 
 
     `;
+
+    }
     initCanvas();
 
     let btn_to_bilder = document.querySelector("#to_bilder");
@@ -108,8 +132,6 @@ function changePictures(){
 
 }
 
-function quizFunctionality(){
-    
-}
+
 
 loadFirstPage();

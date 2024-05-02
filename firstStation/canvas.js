@@ -137,24 +137,44 @@ export function quizFunctionality(){
 
     `;
     initCanvas();
-    let question1 = "vad beställde man för att komma in på kinesen";
-    let answer1 = "två ljumma prips blå";
+
     let btn_to_bilder = document.querySelector("#to_bilder");
     let firstPartDom = document.querySelector("#firstPart");
-    firstPartDom.innerHTML = `
-        <img id="title" src="../media/Group 18.png" alt="">
-        <div id="windows_container">
-            <div id="top_blue_border">
-                <div id="rubrik">Quiz</div>
-                <div id="icon"></div>
+    if(tryAgain === false){
+        firstPartDom.innerHTML = `
+            <img id="title" src="../media/Group 18.png" alt="">
+            <div id="windows_container">
+                <div id="top_blue_border">
+                    <div id="rubrik">Quiz</div>
+                    <div id="icon"></div>
+                </div>
+                <div id="question_container">
+                    <p>${questions[quizQuestionsAnswerd]}</p>
+                    <input type="text">
+                    <button id="skicka">Skicka in</button>
+                </div>
+                <p>Fråga ${questionCounter}/2</p>
             </div>
-            <div id="question_container">
-                <p>${question1}</p>
-                <input type="text">
-                <button id="skicka">Skicka in</button>
+        `;
+    }
+    else{
+        firstPartDom.innerHTML = `
+            <img id="title" src="../media/Group 18.png" alt="">
+            <div id="windows_container">
+                <div id="top_blue_border">
+                    <div id="rubrik">Quiz</div>
+                    <div id="icon"></div>
+                </div>
+                <div id="question_container">
+                    <h1>Testa igen</h1>
+                    <p>${questions[quizQuestionsAnswerd]}</p>
+                    <input type="text">
+                    <button id="skicka">Skicka in</button>
+                </div>
+                <p>Fråga ${questionCounter}/2</p>
             </div>
-        </div>
-    `;
+        `;
+    }
     let back_btn = btn_to_bilder;
     back_btn.id = "back";
     back_btn.textContent = "back";
@@ -165,7 +185,25 @@ export function quizFunctionality(){
 
     
     skickaBtn.addEventListener("click", () => {
-        if(inputValue.value === answer1){
+
+        console.log("hello");
+        if(inputValue.value === answer1 && quizQuestionsAnswerd === 0){
+            questionCounter++;
+            quizQuestionsAnswerd++;
+            console.log("yee");
+            tryAgain = false;
+            quizFunctionality();
+        }
+        else{
+            tryAgain = true
+            quizFunctionality();
+        }
+
+        if(inputValue.value === answer2 && quizQuestionsAnswerd === 1){
+            quizDone = true;
+        }
+        
+        if(quizDone === true){
             window.location.replace("http://localhost:4000/firstStation/finished/")
         }
     })

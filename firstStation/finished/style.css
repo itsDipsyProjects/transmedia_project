@@ -50,3 +50,8 @@ video{
     width: 250px;
     margin-top: 50px;
 }
+
+h1{
+    margin-left: 20px;
+    font-size: 30px;
+}

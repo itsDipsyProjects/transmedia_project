@@ -188,7 +188,7 @@ export function quizFunctionality(){
         questionContainer.style.width = "100%"
         questionContainer.style.display = "flex";
         questionContainer.style.justifyContent = "center";
-        questionContainer.style.alignItems = "center";
+        questionContainer.style.marginTop = "20px"
         questionContainer.style.flexDirection = "row";
         let exitBtn = document.querySelector("#icon2");
         exitBtn.addEventListener("click", () => {

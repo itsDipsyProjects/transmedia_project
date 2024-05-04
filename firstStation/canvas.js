@@ -122,14 +122,14 @@ export function quizFunctionality(){
     container.innerHTML = `
     
         <div id="firstPart">
-            <img id="title" src="../media/Group 18.png" alt="">
+            <img id="title" src="../media/cat.svg" alt="">
             <canvas id="myCanvas" ></canvas>
         </div>
         <div id="secondPart">
             <div id="container_for_cig_and_btn">
                 <div id="cigarets"></div>
                 <div id="container_for_btn">
-                    <button id="to_bilder">Bilder</button>
+                    <div id="to_bilder"></div>
                 </div>
             </div>
         </div>
@@ -142,7 +142,7 @@ export function quizFunctionality(){
     let firstPartDom = document.querySelector("#firstPart");
     if(tryAgain === false){
         firstPartDom.innerHTML = `
-            <img id="title" src="../media/Group 18.png" alt="">
+            <img id="title" src="../media/cat.svg" alt="">
             <div id="windows_container">
                 <div id="top_blue_border">
                     <div id="rubrik">Quiz</div>
@@ -152,61 +152,144 @@ export function quizFunctionality(){
                     <p>${questions[quizQuestionsAnswerd]}</p>
                     <input type="text">
                     <button id="skicka">Skicka in</button>
+                    <p>Fråga ${questionCounter}/2</p>
                 </div>
-                <p>Fråga ${questionCounter}/2</p>
             </div>
         `;
     }
     else{
+
         firstPartDom.innerHTML = `
-            <img id="title" src="../media/Group 18.png" alt="">
+            <img id="title" src="../media/cat.svg" alt="">
             <div id="windows_container">
                 <div id="top_blue_border">
                     <div id="rubrik">Quiz</div>
                     <div id="icon"></div>
                 </div>
                 <div id="question_container">
-                    <h1>Testa igen</h1>
+                    <div id="testa_igen">
+                        <div id="top_blue_border">
+                            <div id="rubrik">Quiz</div>
+                            <div id="icon2"></div>
+                        </div>
+                        <div id="content_wrong_container">
+                            <div id="icon3"></div>
+                            <div id="text_wrong_container">
+                                <p>Fel svar</p>
+                                <p>Försök igen.</p>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        `;
+
+        let questionContainer = document.querySelector("#question_container");
+        questionContainer.style.width = "100%"
+        questionContainer.style.display = "flex";
+        questionContainer.style.justifyContent = "center";
+        questionContainer.style.alignItems = "center";
+        questionContainer.style.flexDirection = "row";
+        let exitBtn = document.querySelector("#icon2");
+        exitBtn.addEventListener("click", () => {
+            firstPartDom.innerHTML = `
+            <img id="title" src="../media/cat.svg" alt="">
+            <div id="windows_container">
+                <div id="top_blue_border">
+                    <div id="rubrik">Quiz</div>
+                    <div id="icon"></div>
+                </div>
+                <div id="question_container">
                     <p>${questions[quizQuestionsAnswerd]}</p>
                     <input type="text">
                     <button id="skicka">Skicka in</button>
+                    <p>Fråga ${questionCounter}/2</p>
                 </div>
-                <p>Fråga ${questionCounter}/2</p>
             </div>
         `;
+
+        let back_btn = btn_to_bilder;
+        back_btn.id = "back";
+        
+    
+        let skickaBtn = document.querySelector("#skicka");
+        let inputValue = document.querySelector("input");
+        console.log(skickaBtn);
+    
+        if(skickaBtn !== null){
+    
+            skickaBtn.addEventListener("click", () => {
+        
+                console.log("hello");
+                if(inputValue.value === answer1 && quizQuestionsAnswerd === 0){
+                    questionCounter++;
+                    quizQuestionsAnswerd++;
+                    console.log("yee");
+                    tryAgain = false;
+                    quizFunctionality();
+                }
+                else{
+                    tryAgain = true
+                    quizFunctionality();
+                }
+        
+                if(inputValue.value === answer2 && quizQuestionsAnswerd === 1){
+                    quizDone = true;
+                }
+                
+                if(quizDone === true){
+                    window.location.replace("http://localhost:4000/firstStation/finished/")
+                }
+            })
+        }
+    
+        back_btn.addEventListener("click", () => {
+            loadFirstPage();
+        });
+
+
+
+
+
+
+        })
+        
+
     }
     let back_btn = btn_to_bilder;
     back_btn.id = "back";
-    back_btn.textContent = "back";
+    
 
     let skickaBtn = document.querySelector("#skicka");
     let inputValue = document.querySelector("input");
     console.log(skickaBtn);
 
+    if(skickaBtn !== null){
+
+        skickaBtn.addEventListener("click", () => {
     
-    skickaBtn.addEventListener("click", () => {
-
-        console.log("hello");
-        if(inputValue.value === answer1 && quizQuestionsAnswerd === 0){
-            questionCounter++;
-            quizQuestionsAnswerd++;
-            console.log("yee");
-            tryAgain = false;
-            quizFunctionality();
-        }
-        else{
-            tryAgain = true
-            quizFunctionality();
-        }
-
-        if(inputValue.value === answer2 && quizQuestionsAnswerd === 1){
-            quizDone = true;
-        }
-        
-        if(quizDone === true){
-            window.location.replace("http://localhost:4000/firstStation/finished/")
-        }
-    })
+            console.log("hello");
+            if(inputValue.value === answer1 && quizQuestionsAnswerd === 0){
+                questionCounter++;
+                quizQuestionsAnswerd++;
+                console.log("yee");
+                tryAgain = false;
+                quizFunctionality();
+            }
+            else{
+                tryAgain = true
+                quizFunctionality();
+            }
+    
+            if(inputValue.value === answer2 && quizQuestionsAnswerd === 1){
+                quizDone = true;
+            }
+            
+            if(quizDone === true){
+                window.location.replace("http://localhost:4000/firstStation/finished/")
+            }
+        })
+    }
 
     back_btn.addEventListener("click", () => {
         loadFirstPage();

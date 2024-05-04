@@ -9,15 +9,15 @@ export function loadFirstPage(){
         container.innerHTML = `
         
             <div id="firstPart">
-                <img id="title" src="../media/Group 18.png" alt="">
+                <img id="title" src="../media/cat.svg" alt="">
                 <canvas id="myCanvas" ></canvas>
+                <div id="to_quiz"></div>
             </div>
             <div id="secondPart">
                 <div id="container_for_cig_and_btn">
                     <div id="cigarets"></div>
                     <div id="container_for_btn">
-                        <button id="to_quiz">Quiz</button>
-                        <button id="to_bilder">Bilder</button>
+                        <div id="to_bilder"></div>
                     </div>
                 </div>
             </div>
@@ -30,14 +30,14 @@ export function loadFirstPage(){
         container.innerHTML = `
         
         <div id="firstPart">
-            <img id="title" src="../media/Group 18.png" alt="">
+            <img id="title" src="../media/cat.svg" alt="">
             <canvas id="myCanvas" ></canvas>
         </div>
         <div id="secondPart">
             <div id="container_for_cig_and_btn">
                 <div id="cigarets"></div>
                 <div id="container_for_btn">
-                    <button id="to_bilder">Bilder</button>
+                    <div id="to_bilder"></div>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@ export function loadFirstPage(){
 
     btn_to_bilder.addEventListener("click", () => {
         firstPartDom.innerHTML = `
-            <img id="title" src="../media/Group 18.png" alt="">
+            <img id="title" src="../media/cat.svg" alt="">
             <div id="windows_container">
                 <div id="top_blue_border">
                     <div id="rubrik">Bilder</div>
@@ -79,7 +79,6 @@ export function loadFirstPage(){
         `;
         let back_btn = btn_to_bilder;
         back_btn.id = "back";
-        back_btn.textContent = "back";
 
         back_btn.addEventListener("click", () => {
             loadFirstPage();

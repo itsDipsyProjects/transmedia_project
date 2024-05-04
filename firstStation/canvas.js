@@ -183,7 +183,7 @@ export function quizFunctionality(){
                 </div>
             </div>
         `;
-
+        
         let questionContainer = document.querySelector("#question_container");
         questionContainer.style.width = "100%"
         questionContainer.style.display = "flex";
@@ -207,7 +207,7 @@ export function quizFunctionality(){
                 </div>
             </div>
         `;
-
+        tryAgain = false;
         let back_btn = btn_to_bilder;
         back_btn.id = "back";
         
@@ -215,7 +215,7 @@ export function quizFunctionality(){
         let skickaBtn = document.querySelector("#skicka");
         let inputValue = document.querySelector("input");
         console.log(skickaBtn);
-    
+        
         if(skickaBtn !== null){
     
             skickaBtn.addEventListener("click", () => {
@@ -238,6 +238,8 @@ export function quizFunctionality(){
                 }
                 
                 if(quizDone === true){
+                    document.body.innerHTML = ``;
+                    document.body.style.backgroundColor = "black"
                     window.location.replace("http://localhost:4000/firstStation/finished/")
                 }
             })
@@ -246,13 +248,8 @@ export function quizFunctionality(){
         back_btn.addEventListener("click", () => {
             loadFirstPage();
         });
-
-
-
-
-
-
-        })
+        
+    })
         
 
     }
@@ -286,6 +283,8 @@ export function quizFunctionality(){
             }
             
             if(quizDone === true){
+                document.body.innerHTML = ``;
+                document.body.style.backgroundColor = "black"
                 window.location.replace("http://localhost:4000/firstStation/finished/")
             }
         })

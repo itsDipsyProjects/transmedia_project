@@ -2,6 +2,12 @@ let the_static_letters = ["s","i","b","y","l","l","a"];
 let random_letters = ["d","e","c","f","g","m","n","o","p","y","x","å","ä","ö"];
 let counter = 0;
 let the_real_array = [];
+let dropables = document.querySelectorAll(".droppable");
+let letters_inventory_dom = document.querySelectorAll("#your_letters_inventory div");
+let secret_word_divs_dom = document.querySelectorAll("#secretWord div");
+let id_drag = ""
+
+
 function randomizeLetters() {  
 
     let randomIndex = getRandomIndex(the_static_letters)
@@ -12,30 +18,33 @@ function randomizeLetters() {
         randomizeLetters();
     }
     else{
-        let id_of_the_dragable_dom = "";
-        let letters_inventory_dom = document.querySelectorAll("#your_letters_inventory div");
-        let secret_word_divs_dom = document.querySelectorAll("#secretWord div");
-        let dropables = document.querySelectorAll(".droppable");
-        console.log(dropables);
         letters_inventory_dom.forEach((element, index) => {
             element.innerHTML = `
                 ${the_real_array[index]}
-            `;
-            element.addEventListener("drag", (event) => {
-                console.log("drag");
-                id_of_the_dragable_dom = event.currentTarget.id;
+            `;  
+            element.addEventListener("dragstart", (event) => {
+                id_drag = event.target.id
+                console.log(id_drag);
             })
+            
+            
         })
-        dropables.forEach((dropableDom) => {
-            dropableDom.addEventListener("mouseover", () => {
-                console.log('drop');
-                let dragDom = document.querySelector(`#${id_of_the_dragable_dom }`)
-                dropableDom.replaceWith(dragDom)
+        
+        dropables.forEach((dropable) => {
+             dropable.addEventListener("dragover", function (event){
+                 console.log(id_drag);
+                 let dragableDom = document.querySelector(`#${id_drag}`)
+                 dragableDom.addEventListener("dragend", () => {
+                     dragableDom.classList.remove("draggable")
+                     dragableDom.attributes.removeNamedItem("draggable")
+                    dropable.replaceWith(dragableDom);
+                })
             })
+           
         })
+        
     }
 }
-
 
 
 function getRandomIndex(array) {
@@ -43,7 +52,6 @@ function getRandomIndex(array) {
     return randomIndex;
 }
 
-// Example usage:
 
 
 function start(){

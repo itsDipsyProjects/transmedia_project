@@ -7,8 +7,8 @@ let the_real_array = [];
 let dropables = document.querySelectorAll(".droppable");
 let letters_inventory_dom = document.querySelectorAll("#your_letters_inventory div");
 let secret_word_divs_dom = document.querySelectorAll("#secretWord div");
-let id_drag = ""
-
+let id_drag = "";
+let id_dragOver = "";
 
 let gameDone = 0;
 
@@ -49,21 +49,23 @@ function start(){
 
 function dragAndDrop(){
     letters_inventory_dom.forEach((element, index) => {
-        element.addEventListener("dragstart", (event) => {
-            id_drag = event.target.id
-            console.log(id_drag);
-        })
-    })
-    dropables.forEach((dropable) => {
-         dropable.addEventListener("dragover", function (event){
-             console.log(id_drag);
-             let dragableDom = document.querySelector(`#${id_drag}`)
-             dragableDom.addEventListener("dragend", () => {
-                dropable.replaceWith(dragableDom);
-                dragableDom.attributes.removeNamedItem("draggable")
+        dropables.forEach((dropable) => {
+            dropable.addEventListener("dragover", function (event1){
+                id_dragOver = event1.target.id;
+    
             })
         })
-       
+     
+        element.addEventListener("dragstart", (event) => {
+            id_drag = event.target.id
+            let dragableDom = document.querySelector(`#${id_drag}`)
+            dragableDom.addEventListener("dragend", (event2) => {
+                let dropable = document.querySelector(`#${id_dragOver}`)
+                dropable.replaceWith(dragableDom);
+                dragableDom.attributes.removeNamedItem("draggable");
+                console.log(dragableDom);
+            })
+        })
     })
 
 }

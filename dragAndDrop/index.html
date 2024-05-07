@@ -8,23 +8,24 @@
 </head>
 <body>
     <div id="container">
+        <h1>Gissa Ordet</h1>
         <div id="secretWord">
-            <div id="first_letter">_</div>
-            <div id="second_letter">_</div>
-            <div id="third_letter">_</div>
-            <div id="fourth_letter">_</div>
-            <div id="fifth_letter">_</div>
-            <div id="sixth_letter">_</div>
-            <div id="seventh_letter">_</div>
+            <div class="droppable" id="first_letter"></div>
+            <div class="droppable" id="second_letter"></div>
+            <div class="droppable" id="third_letter"></div>
+            <div class="droppable" id="fourth_letter"></div>
+            <div class="droppable" id="fifth_letter"></div>
+            <div class="droppable" id="sixth_letter"></div>
+            <div class="droppable" id="seventh_letter"></div>
         </div>
         <div id="your_letters_inventory">
-            <div id="a_letter_1"></div>
-            <div id="a_letter_2"></div>
-            <div id="a_letter_3"></div>
-            <div id="a_letter_4"></div>
-            <div id="a_letter_5"></div>
-            <div id="a_letter_6"></div>
-            <div id="a_letter_7"></div>
+            <div class="draggable" id="letter1" draggable="true"></div>
+            <div class="draggable" id="letter2" draggable="true"></div>
+            <div class="draggable" id="letter3" draggable="true"></div>
+            <div class="draggable" id="letter4" draggable="true"></div>
+            <div class="draggable" id="letter5" draggable="true"></div>
+            <div class="draggable" id="letter6" draggable="true"></div>
+            <div class="draggable" id="letter7" draggable="true"></div>
         </div>
     </div>
     <script src="./index.js"></script>

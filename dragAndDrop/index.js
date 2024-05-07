@@ -70,10 +70,26 @@ function dragAndDrop(){
 
 function gameLoop() {
     // Update animation state
-    console.log("hello");
     let check = document.querySelectorAll(".droppable");
     if(check.length === 0){
-        prompt("Done")
+        function makeWord(){
+            let check = document.querySelectorAll(".draggable");
+            console.log(check);
+            let word = "";
+            check.forEach(boxDom => {
+                word += boxDom.innerText
+            })
+            console.log(word);
+            return word;
+        }
+        let word = makeWord();
+
+        if(word === "sibylla"){
+            prompt("Right")
+        }
+        else{
+            prompt("Wrong")
+        }
         
     }
     else{

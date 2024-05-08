@@ -150,8 +150,15 @@ export function quizFunctionality(){
                 </div>
                 <div id="question_container">
                     <p>${questions[quizQuestionsAnswerd]}</p>
-                    <input type="text">
-                    <button id="skicka">Skicka in</button>
+                    <form>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                    </form>
+
                     <p>Fråga ${questionCounter}/2</p>
                 </div>
             </div>
@@ -191,6 +198,11 @@ export function quizFunctionality(){
         questionContainer.style.marginTop = "20px"
         questionContainer.style.flexDirection = "row";
         let exitBtn = document.querySelector("#icon2");
+
+
+
+
+        
         exitBtn.addEventListener("click", () => {
             firstPartDom.innerHTML = `
             <img id="title" src="../media/cat.svg" alt="">

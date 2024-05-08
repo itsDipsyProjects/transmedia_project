@@ -67,7 +67,7 @@ body{
 
 #cigarets{
     width: 220px;
-    height: 400px;
+    height: 350px;
     background-image: url("../media/cigaretts.svg");
     background-position: center;
     background-size: cover;
@@ -248,10 +248,9 @@ p{
 }
 
 input{
-    font-size: 22px;
-    margin: 20px;
-    width: 200px;
-    height: 40px;
+    
+    width: 20px;
+    height: 20px;
 }
 
 #skicka{

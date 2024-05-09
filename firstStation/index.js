@@ -7,7 +7,8 @@ export function loadFirstPage(){
     let container = document.querySelector("#container");
     if(quizReady === true){
         container.innerHTML = `
-        
+            <div id="background"></div>
+
             <div id="firstPart">
                 <img id="title" src="../media/cat.svg" alt="">
                 <canvas id="myCanvas" ></canvas>
@@ -28,7 +29,8 @@ export function loadFirstPage(){
     }
     else{
         container.innerHTML = `
-        
+        <div id="background"></div>
+
         <div id="firstPart">
             <img id="title" src="../media/cat.svg" alt="">
             <canvas id="myCanvas" ></canvas>

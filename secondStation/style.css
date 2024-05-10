@@ -2,7 +2,10 @@ body{
     margin: 0;
     background-color: #B9B8B6  ;
 }
-
+canvas{
+    width: 300px;
+    height: 300px;
+}
 #back{
     width: 250px;
     height: 50px;
@@ -12,21 +15,31 @@ body{
     background-repeat: no-repeat;
     background-size: cover; 
 }
+label{
+    font-size: 17px;
+}
+input{
+    margin: 5px;
+    padding: 0;
+}
 #background{
     display: flex;
-    position: relative;
-    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    padding: 20px;    
     width: 100vw;
-    height: 1000px;
+    min-height: 1000px;
     background-image: url("../media/background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
 }
 #to_bilder{
-    width: 200px;
-    height: 160px;
-    margin-top: 100px;
+    width: 150px;
+    height: 120px;
+    margin-top: 0px;
     background-image: url("../media/to_bilder.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -36,7 +49,7 @@ body{
 
 #to_quiz{
     display: flex;
-    margin-top: 100px;
+    margin-top: 200px;
     width: 150px;
     height: 150px;
     background-image: url("../media/quiz.svg");
@@ -56,10 +69,12 @@ body{
     justify-content: center;
     height: 100vh;
     align-items: center;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 #firstPart{
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,21 +82,21 @@ body{
 }
 
 #secondPart{
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 #title {
-    margin-top: 100px;
+    margin-top: 90px;
     height: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 #cigarets{
-    width: 220px;
-    height: 350px;
+    width: 150px;
+    height: 300px;
     background-image: url("../media/cigaretts.svg");
     background-position: center;
     background-size: cover;
@@ -93,7 +108,7 @@ body{
     height: 300px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+  
 }
 
 #container_for_btn{
@@ -116,8 +131,8 @@ button{
 
 
 #windows_container{
-    width: 430px;
-    height: 400px;
+    width: 350px;
+    height: 320px;
     background-color: #B9B8B6;
     border-top: 2px solid rgb(207, 207, 207);
     border-left: 2px solid rgb(207, 207, 207);
@@ -200,8 +215,8 @@ p{
     align-items: center;
 }
 #picture{
-    width: 350px;
-    height: 280px;
+    width: 250px;
+    height: 200px;
     background-color: grey;
     background-position: center;
     background-size: cover;
@@ -253,8 +268,8 @@ p{
 #question_container{
     display: flex;
     flex-direction:column;
-    width: 100%;
-    height: 100%;
+    width: 350px;
+    height: 280px;
 }
 
 p{

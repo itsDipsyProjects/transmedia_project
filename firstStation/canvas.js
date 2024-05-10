@@ -114,7 +114,7 @@ export function initCanvas(){
 export function quizFunctionality(){
     let container = document.querySelector("#container");
     container.innerHTML = `
-    
+        <div id="background"></div>
         <div id="firstPart">
             <img id="title" src="../media/cat.svg" alt="">
             <canvas id="myCanvas" ></canvas>
@@ -135,6 +135,7 @@ export function quizFunctionality(){
     let btn_to_bilder = document.querySelector("#to_bilder");
     let firstPartDom = document.querySelector("#firstPart");
     if(tryAgain === false && quizQuestionsAnswerd === 0){
+       
         firstPartDom.innerHTML = `
             <img id="title" src="../media/cat.svg" alt="">
             <div id="windows_container">

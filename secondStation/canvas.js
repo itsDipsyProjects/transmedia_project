@@ -114,7 +114,7 @@ export function initCanvas(){
 export function quizFunctionality(){
     let container = document.querySelector("#container");
     container.innerHTML = `
-    
+        <div id="background"></div>
         <div id="firstPart">
             <img id="title" src="../media/cat.svg" alt="">
             <canvas id="myCanvas" ></canvas>

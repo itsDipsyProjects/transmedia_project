@@ -27,51 +27,43 @@ export function initCanvas(){
     
     img3.src = "../media/stopClicked.png";
     
-    const rectX = 93;
-    const rectY = 268;
+    const rectX = 79;
+    const rectY = 227;
     const rectWidth = 50;
     const rectHeight = 70;
     
     
-    const rectX2 = 153;
-    const rectY2 = 268;
+    const rectX2 = 123;
+    const rectY2 = 227;
     const rectWidth2 = 50;
     const rectHeight2 = 70;
     
     
-
+    
     img1.onload = function() {
+
         
         if(playClickCounter === 0){
             ctx.drawImage(img1, -20, -220); 
             
-            ctx.fillStyle = 'rgba(0, 0, 0,0)'; 
-            ctx.strokeStyle = 'rgba(10, 200, 00)'; 
             
-            ctx.strokeRect(rectX, rectY, rectWidth, rectHeight); 
         }
 
 
         if(playClickCounter === 2){
             ctx.drawImage(img2, -20, -220); 
             
-            ctx.fillStyle = 'rgba(0, 0, 0,0)'; 
-            ctx.strokeStyle = 'rgba(10, 200, 00)'; 
-            
-            ctx.strokeRect(rectX2, rectY2, rectWidth, rectHeight); 
+
         }
 
         if(playClickCounter === 3){
             ctx.drawImage(img3, -20, -220); 
             
-            ctx.fillStyle = 'rgba(0, 0, 0,0)'; 
-            ctx.strokeStyle = 'rgba(10, 200, 00)'; 
-            
-            ctx.strokeRect(rectX, rectY, rectWidth, rectHeight); 
+       
         }
 
     
-    
+     
       
     
         
@@ -81,11 +73,13 @@ export function initCanvas(){
 
             const x = event.offsetX;
             const y = event.offsetY;
-            
+            console.log(x);
+            console.log(y);
             // Play Clicked
-            if (x >= rectX && x <= rectX + rectWidth && y >= rectY && y <= rectY + rectHeight && playClickCounter === 0 || playClickCounter === 3) {
+            if ((x >= rectX && x <= rectX + rectWidth && y >= rectY && y <= rectY + rectHeight) && (playClickCounter === 0 || playClickCounter === 3)) {
                 ctx.clearRect(0,0,canvasWidth, canvasHeight)
                 ctx.drawImage(img2,-20,-220)
+                console.log("play");
                 
                 
                 

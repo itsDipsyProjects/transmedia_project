@@ -125,7 +125,7 @@ button{
 
 #windows_container{
     width: 350px;
-    height: 300px;
+    height: 320px;
     background-color: #B9B8B6;
     border-top: 2px solid rgb(207, 207, 207);
     border-left: 2px solid rgb(207, 207, 207);
@@ -208,8 +208,8 @@ p{
     align-items: center;
 }
 #picture{
-    width: 350px;
-    height: 280px;
+    width: 250px;
+    height: 200px;
     background-color: grey;
     background-position: center;
     background-size: cover;

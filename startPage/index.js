@@ -22,14 +22,12 @@ async function who_do_you_know(names) {
                     </video>
                 `
                 setTimeout(() =>{
-                    window.location.replace("http://localhost:4000/");
+                    window.location.replace("/startPage");
 
                 }, 2000)                
             }
             else{
-                let request = await fetch("http://localhost:4000/?test=hej");
-                let data = await request.text();
-                console.log(data);
+              
                 let intro_text_dom1 = document.querySelector("#text1");  
                 console.log(intro_text_dom1);
                 let intro_text_dom2 = document.querySelector("#text2");  
@@ -59,8 +57,8 @@ async function who_do_you_know(names) {
                             } else {
                                 clearInterval(intervalId2);
                                 wait_before_intro_is_done = true;   
-                                if(data === "Allowed" && wait_before_intro_is_done === true){
-                                    window.location.replace("http://localhost:4000/firstStation/index.html");
+                                if(wait_before_intro_is_done === true){
+                                    window.location.replace("/Annalindsplats/index.html");
                                 }
                             }
                         },100)

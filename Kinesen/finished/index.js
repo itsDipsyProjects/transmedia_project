@@ -4,8 +4,8 @@ let intro_text_dom1 = document.querySelector("#text1");
 console.log(intro_text_dom1);
 let intro_text_dom2 = document.querySelector("#text2");  
 
-let intro_text_first = `Bra jobbat nu har du klarat första stationen`; 
-let intro_text_first2 = `Gå till ..... För att ta dig vidare. Vi syns`; 
+let intro_text_first = `Bra jobbat nu är du nästan framme.`; 
+let intro_text_first2 = `Innan du får höra sista biten så måste du lösa något åt oss...`; 
 
 let arrayOfLettersInText1 = intro_text_first.split("")
 console.log(arrayOfLettersInText1);
@@ -30,7 +30,7 @@ let intervalId1 = setInterval(() => {
                 clearInterval(intervalId2);
                 wait_before_intro_is_done = true;   
                 if(wait_before_intro_is_done === true){
-                    window.location.replace("http://google.com");
+                    window.location.replace("../../dragAndDrop/index.html");
                 }
             }
         },100)

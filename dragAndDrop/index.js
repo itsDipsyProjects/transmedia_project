@@ -138,7 +138,7 @@ function gameLoop() {
         let word = makeWord();
 
         if(word === "sibylla"){
-            prompt("Right")
+            window.location.replace("../Sibylla/index.html")
         }
         else{
             prompt("Wrong")

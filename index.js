@@ -1,5 +1,15 @@
 let names = ["Elliot", "Hugo", "Guignard", "Luna", "Jennifier", "Olivia" ];
 
+
+
+/*
+    TODO: fixa så att att alla paths är rätta och relativa så att det funkar när det är uppe 
+    på github pages. Tänk på att rooten blir https://itsdipsyprojects/transmedia_project 
+
+*/
+
+
+
 async function who_do_you_know(names) {
     
     let the_input = document.querySelector("input");
@@ -22,7 +32,7 @@ async function who_do_you_know(names) {
                     </video>
                 `
                 setTimeout(() =>{
-                    window.location.replace("/");
+                    window.location.replace("./index.html");
 
                 }, 2000)                
             }

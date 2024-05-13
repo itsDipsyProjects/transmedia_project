@@ -1,0 +1,8 @@
+Den viktigaste biten
+
+
+1.Fix a loading popup for images so that the app loads properly
+2.Fixa så att alla images inte copyright tillsvidare
+3.Fixa alla quiz frågor så att de är correcta
+4.Fixa css så att det är anpassat till de flesta mobil telephoner
+5.Fixa transisitons och animationer så att ser nice ut

@@ -26,7 +26,7 @@ async function who_do_you_know(names) {
                 document.body.innerHTML = "";
                 document.body.innerHTML = `
                     <video autoplay loop muted>
-                        <source src="../media/error.mp4" type="video/mp4">
+                        <source src="./media/error.mp4" type="video/mp4">
                         <!-- Add additional source elements for different video formats if needed -->
                         Your browser does not support the video tag.
                     </video>
@@ -68,7 +68,7 @@ async function who_do_you_know(names) {
                                 clearInterval(intervalId2);
                                 wait_before_intro_is_done = true;   
                                 if(wait_before_intro_is_done === true){
-                                    window.location.replace("/Annalindsplats/index.html");
+                                    window.location.replace("./Annalindsplats/index.html");
                                 }
                             }
                         },100)

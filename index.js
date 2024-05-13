@@ -22,7 +22,7 @@ async function who_do_you_know(names) {
                     </video>
                 `
                 setTimeout(() =>{
-                    window.location.replace("/startPage");
+                    window.location.replace("/");
 
                 }, 2000)                
             }

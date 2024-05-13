@@ -68,7 +68,7 @@ async function who_do_you_know(names) {
                                 clearInterval(intervalId2);
                                 wait_before_intro_is_done = true;   
                                 if(wait_before_intro_is_done === true){
-                                    window.location.replace("./Annalindsplats/");
+                                    window.location.replace("./");
                                 }
                             }
                         },100)

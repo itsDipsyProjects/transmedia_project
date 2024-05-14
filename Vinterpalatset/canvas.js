@@ -12,20 +12,19 @@ export function initCanvas(){
     canvas.height = canvasHeight;
     
     
-    
     const img1 = new Image();
     
-    img1.src = "../media/notClicked.png";
+    img1.src = "../media/player/notClicked.png";
     
     
     const img2 = new Image();
     
-    img2.src = "../media/clicked.png";
+    img2.src = "../media/player/clicked.png";
     
     
     const img3 = new Image();
     
-    img3.src = "../media/stopClicked.png";
+    img3.src = "../media/player/stopClicked.png";
     
     const rectX = 79;
     const rectY = 227;

@@ -209,8 +209,9 @@ export function quizFunctionality(){
                     let checkedLabel = document.querySelector('label[for="' + radioBtn.id + '"]').textContent;
                     
                     if(checkedLabel === answer2 ){
-                        console.log("right");
-                        window.location.replace("./finished/index.html")
+                        quizQuestionsAnswerd++;
+                        questionCounter++;
+                        quizFunctionality();
                     }
                     else{
                         tryAgain = true
@@ -252,10 +253,8 @@ export function quizFunctionality(){
                 if(radioBtn.checked){
                     let checkedLabel = document.querySelector('label[for="' + radioBtn.id + '"]').textContent;
                     
-                    if(checkedLabel === answer2 ){
-                        quizQuestionsAnswerd++;
-                        questionCounter++;
-                        quizFunctionality()
+                    if(checkedLabel === answer3 ){
+                       window.location.replace("./finished/index.html")
                     }
                     else{
                         tryAgain = true

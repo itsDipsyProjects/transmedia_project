@@ -12,11 +12,14 @@
   
     <script>
         let test = false;
-        let questions = ["Kungen i köket på Sibylla, vad kallas han?", "test?"];
+        let questions = ["Kungen i köket på Sibylla, vad kallas han?", "Vad beställer Pelle inne på Sibylla?", "Vad brukade mannen i rullstol köra mot alla barn som gick förbi?"];
         let optionsForQuiz1 = ["Mega-Arne", "Super-Arne", "Dunder-Arne"];
-        let optionsForQuiz2 = ["test1", "test2", "test3"];
+        let optionsForQuiz2 = ["En pommestallrik", "En dubbel fransk med vitlökssås", "En Bamse med mos"];
+        let optionsForQuiz3 = ["Slänga upp långfingret", "Vinka lite snällt", "Räcka ut tungan"];
+
         let answer1 = "Dunder-Arne";
-        let answer2 = "test2";
+        let answer2 = "En Bamse med mos";
+        let answer3 = "Slänga upp långfingret"
         let questionCounter = 1;
         let tryAgain = false;
         let quizQuestionsAnswerd = 0;
@@ -29,7 +32,7 @@
                 
         const audio2 = new Audio();
                 
-        audio2.src = "./Sibylla.aac"; 
+        audio2.src = "../sounds/test.mp3"; 
 
     </script>
     <script type="module" src="./canvas.js"></script>

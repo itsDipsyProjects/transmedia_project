@@ -55,3 +55,8 @@ h1{
     margin-left: 20px;
     font-size: 30px;
 }
+
+video{
+    width: 100vw;
+    height: 100vh;
+}

@@ -1,5 +1,5 @@
-let namesUpperCase = ["Elliot", "Hugo", "Amelie", "Luna", "Jennifier", "Olivia" ];
-let namesLowerCase = ["elliot", "hugo", "amelie", "luna", "jennifier", "olivia" ];
+let namesUpperCase = ["Elliot", "Hugo", "Amelie", "Luna", "Jennifer", "Olivia" ];
+let namesLowerCase = ["elliot", "hugo", "amelie", "luna", "jennifer", "olivia" ];
 
 
 /*

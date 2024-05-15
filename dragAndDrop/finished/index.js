@@ -30,7 +30,7 @@ let intervalId1 = setInterval(() => {
                 clearInterval(intervalId2);
                 wait_before_intro_is_done = true;   
                 if(wait_before_intro_is_done === true){
-                    window.location.replace("http://google.com");
+                    window.location.replace("https://open.spotify.com/playlist/7ex2FqZAmaisW1dhCmFREw?si=557a8bdd16fc4bc1&pt=367e9c6d448d9315e33a06a22366da77");
                 }
             }
         },100)

@@ -1,5 +1,5 @@
-let names = ["Elliot", "Hugo", "Guignard", "Luna", "Jennifier", "Olivia" ];
-
+let namesUpperCase = ["Elliot", "Hugo", "Amelie", "Luna", "Jennifier", "Olivia" ];
+let namesLowerCase = ["elliot", "hugo", "amelie", "luna", "jennifier", "olivia" ];
 
 
 /*
@@ -10,18 +10,26 @@ let names = ["Elliot", "Hugo", "Guignard", "Luna", "Jennifier", "Olivia" ];
 
 
 
-async function who_do_you_know(names) {
+async function who_do_you_know(namesUpperCase,namesLowerCase) {
     
     let the_input = document.querySelector("input");
     let wrongOrRight = 0;
     window.addEventListener("keypress", async (event) => {
         if(event.key === "Enter"){
-            names.forEach(function (element){
+            namesUpperCase.forEach(function (element){
                 if(element === the_input.value){
                     wrongOrRight = 1;
                 }
             });
-        
+
+            if (wrongOrRight === 0) {
+                namesLowerCase.forEach(function (element){
+                    if(element === the_input.value){
+                        wrongOrRight = 1;
+                    }
+                });
+            }
+
             if (wrongOrRight === 0) {
                 document.body.innerHTML = "";
                 document.body.innerHTML = `
@@ -86,4 +94,4 @@ async function who_do_you_know(names) {
     
 }
 
-who_do_you_know(names);
+who_do_you_know(namesUpperCase, namesLowerCase);

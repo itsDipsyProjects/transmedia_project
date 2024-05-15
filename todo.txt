@@ -1,4 +1,7 @@
-Den viktigaste biten
+BUGAR:
+
+1.Fixa så att drag and drop fungerar på mobilen
+
 
 
 1.Fix a loading popup for images so that the app loads properly
@@ -6,3 +9,6 @@ Den viktigaste biten
 3.Fixa alla quiz frågor så att de är correcta
 4.Fixa css så att det är anpassat till de flesta mobil telephoner
 5.Fixa transisitons och animationer så att ser nice ut
+
+
+

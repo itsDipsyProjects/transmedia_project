@@ -73,7 +73,6 @@ function randomizeLetters() {
         randomizeLetters();
     }
     else{
-        console.log("yrs");
         letters_inventory_dom.forEach((element, index) => {
             element.textContent = `
                 ${the_real_array[index]}
@@ -92,31 +91,21 @@ function randomizeLetters() {
 
 
 function start(){
+    clickAndDrop();
     randomizeLetters();
-    dragAndDrop();
 }
 
 
 
-function dragAndDrop(){
+function clickAndDrop(){
+    let counter = 0;
     letters_inventory_dom.forEach((element, index) => {
-        dropables.forEach((dropable) => {
-            dropable.addEventListener("dragover", function (event1){
-                id_dragOver = event1.target.id;
-    
-            })
+        element.addEventListener("click", (event) => {
+            console.log("hello");
+            dropables[counter].replaceWith(element);
+            counter++;
         })
-     
-        element.addEventListener("dragstart", (event) => {
-            id_drag = event.target.id
-            let dragableDom = document.querySelector(`#${id_drag}`)
-            dragableDom.addEventListener("dragend", (event2) => {
-                let dropable = document.querySelector(`#${id_dragOver}`)
-                dropable.replaceWith(dragableDom);
-                dragableDom.attributes.removeNamedItem("draggable");
-                console.log(dragableDom);
-            })
-        })
+        
     })
 
 }

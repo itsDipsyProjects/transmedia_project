@@ -153,7 +153,7 @@ export function quizFunctionality(){
                         <label for="thirdQuestion">${optionsForQuiz1[2]}</label>
                     </form>
 
-                    <p>Fråga ${questionCounter}/2</p>
+                    <p>Fråga ${questionCounter}/3</p>
                 </div>
             </div>
         `;
@@ -198,7 +198,7 @@ export function quizFunctionality(){
                         <label for="thirdQuestion">${optionsForQuiz2[2]}</label>
                     </form>
 
-                    <p>Fråga ${questionCounter}/2</p>
+                    <p>Fråga ${questionCounter}/3</p>
                 </div>
             </div>
         `;

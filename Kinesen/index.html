@@ -12,11 +12,14 @@
   
     <script>
         let test = false;
-        let questions = ["Vad heter mannen som bossar över Kinesen?", "test2?"];
+        let questions = ["Vad heter mannen som bossar över Kinesen?", "Vad i resturangen är “så jävla najs” enlig Ylva?", "Vilken svensk kändis fick vi nöja oss med på Kinesen ikväll?"];
         let optionsForQuiz1 = ["Le", "La", "Lo"];
-        let optionsForQuiz2 = ["test1", "test2", "test3"];
+        let optionsForQuiz2 = ["Vårrullarna", "Ölen", "Sällskapet"];
+        let optionsForQuiz3 = ["Pernilla Wahlgren", "Lena Nyman", "Lena PH"];
+
         let answer1 = "La";
-        let answer2 = "test3";
+        let answer2 = "Vårrullarna";
+        let answer3 = "Lena Nyman"
         let questionCounter = 1;
         let tryAgain = false;
         let quizQuestionsAnswerd = 0;
@@ -29,7 +32,7 @@
                 
         const audio2 = new Audio();
                 
-        audio2.src = "./Kinisen.aac"; 
+        audio2.src = "../sounds/test.mp3"; 
 
     </script>
     <script type="module" src="./canvas.js"></script>

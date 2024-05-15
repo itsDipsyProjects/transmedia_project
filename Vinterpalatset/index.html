@@ -12,11 +12,13 @@
   
     <script>
         let test = false;
-        let questions = ["Vilket band spelade på Vinterpalatset ikväll?", "", ""];
-        let optionsForQuiz1 = ["Death from above", "Napalm Death", "Trazan och banarne"];
-        let optionsForQuiz2 = ["", "", ""];
-        let answer1 = "Napalm Death";
-        let answer2 = "test1";
+        let questions = ["Vad kallades valvakan som brukade hållas på Vinterpalatset?","Vilket band spelade på Vinterpalatset ikväll?", "Vad skriker Pelle till dig under konserten?"];
+        let optionsForQuiz1 = ["Blåval", "Val-1", "Valvakum"];
+        let optionsForQuiz2 = ["Death from above", "Napalm Death", "Trazan och banarne"];
+        let optionsForQuiz3 = ["Detta är så jävla energi!", "Upp med dig jävla råtta!", "Släpp sargen fegis!"];
+        let answer1 = "Valvakum"
+        let answer2 = "Napalm Death";
+        let answer3 = "Detta är så jävla energi!";
         let questionCounter = 1;
         let tryAgain = false;
         let quizQuestionsAnswerd = 0;
@@ -29,7 +31,7 @@
                 
         const audio2 = new Audio();
                 
-        audio2.src = "../sounds/test.mp3"; 
+        audio2.src = "./Vinterpalatset.aac"; 
 
     </script>
     <script type="module" src="./canvas.js"></script>

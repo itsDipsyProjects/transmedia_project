@@ -79,7 +79,6 @@ export function initCanvas(){
             if ((x >= rectX && x <= rectX + rectWidth && y >= rectY && y <= rectY + rectHeight) && (playClickCounter === 0 || playClickCounter === 3)) {
                 ctx.clearRect(0,0,canvasWidth, canvasHeight)
                 ctx.drawImage(img2,-20,-220)
-                console.log("play");
                 
                 
                 
@@ -154,7 +153,7 @@ export function quizFunctionality(){
                         <label for="thirdQuestion">${optionsForQuiz1[2]}</label>
                     </form>
 
-                    <p>Fråga ${questionCounter}/2</p>
+                    <p>Fråga ${questionCounter}/3</p>
                 </div>
             </div>
         `;
@@ -166,7 +165,6 @@ export function quizFunctionality(){
                     let checkedLabel = document.querySelector('label[for="' + radioBtn.id + '"]').textContent;
                     
                     if(checkedLabel === answer1 ){
-                        console.log("right");
                         quizQuestionsAnswerd++;
                         questionCounter++;
                         quizFunctionality();
@@ -199,7 +197,7 @@ export function quizFunctionality(){
                         <label for="thirdQuestion">${optionsForQuiz2[2]}</label>
                     </form>
 
-                    <p>Fråga ${questionCounter}/2</p>
+                    <p>Fråga ${questionCounter}/3</p>
                 </div>
             </div>
         `;
@@ -222,6 +220,52 @@ export function quizFunctionality(){
             })
         })
     }
+
+
+    if(tryAgain === false && quizQuestionsAnswerd === 2){
+        firstPartDom.innerHTML = `
+            <img id="title" src="../media/cat.svg" alt="">
+            <div id="windows_container">
+                <div id="top_blue_border">
+                    <div id="rubrik">Quiz</div>
+                    <div id="icon"></div>
+                </div>
+                <div id="question_container">
+                    <p>${questions[quizQuestionsAnswerd]}</p>
+                    <form>
+                        <input type="radio" name="option" id="firstQuestion" value="firstQuestion">
+                        <label for="firstQuestion">${optionsForQuiz3[0]}</label><br>
+                        <input type="radio" name="option" id="secondQuestion" value="SecondQuestion">
+                        <label for="secondQuestion">${optionsForQuiz3[1]}</label><br>
+                        <input type="radio" name="option" id="thirdQuestion" value="thirdQuestion">
+                        <label for="thirdQuestion">${optionsForQuiz3[2]}</label>
+                    </form>
+
+                    <p>Fråga ${questionCounter}/3</p>
+                </div>
+            </div>
+        `;
+
+        let radioBtns = document.getElementsByName('option');
+        radioBtns.forEach((radioBtn) => {
+            radioBtn.addEventListener("click", () => {
+                if(radioBtn.checked){
+                    let checkedLabel = document.querySelector('label[for="' + radioBtn.id + '"]').textContent;
+                    
+                    if(checkedLabel === answer2 ){
+                        quizQuestionsAnswerd++;
+                        questionCounter++;
+                        quizFunctionality()
+                    }
+                    else{
+                        tryAgain = true
+                        quizFunctionality();
+                    }
+                }
+            })
+        })
+    }
+
 
     if(tryAgain === true){
 

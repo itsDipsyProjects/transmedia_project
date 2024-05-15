@@ -4,8 +4,8 @@ let intro_text_dom1 = document.querySelector("#text1");
 console.log(intro_text_dom1);
 let intro_text_dom2 = document.querySelector("#text2");  
 
-let intro_text_first = `Bra jobbat nu har du klarat första stationen`; 
-let intro_text_first2 = `Gå till .... För att ta dig vidare. Vi syns`; 
+let intro_text_first = `Bra jobbat du klarade det`; 
+let intro_text_first2 = `Gå till Sibylla på möllevångstorget. Vi syns`; 
 
 let arrayOfLettersInText1 = intro_text_first.split("")
 console.log(arrayOfLettersInText1);

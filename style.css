@@ -6,6 +6,8 @@ body{
     color: green;
 }
 
+
+
 #container{
     
     width: 100vw;
@@ -49,4 +51,16 @@ video{
 #text2{
     width: 250px;
     margin-top: 50px;
+}
+
+
+#test{
+    justify-self: flex-start;
+    width: 100vw;
+    display: flex;
+    
+}
+span{
+    width: fit-content;
+    height: 20px;
 }

@@ -1,4 +1,4 @@
-
+import { errorDisplay } from "../../error.js";
 
 let intro_text_dom1 = document.querySelector("#text1");  
 console.log(intro_text_dom1);
@@ -31,14 +31,26 @@ let intervalId1 = setInterval(() => {
                 let intervalId3 = setInterval(() =>{ 
                     wait_before_intro_is_done = true;   
                     if(wait_before_intro_is_done === true){
-                        document.body.innerHTML = "";
-                        document.body.innerHTML = `
-                            <video autoplay loop muted>
-                                <source src="../../media/error.mp4" type="video/mp4">
-                                <!-- Add additional source elements for different video formats if needed -->
-                                Your browser does not support the video tag.
-                            </video>
-                        `
+                        let gamestate = {notDone: true};
+                        let container = document.querySelector("#container");
+                        container.style.display = "flex"
+                        container.innerHTML = `<div id="test"></div>`;
+                        
+                        function gameloop(){
+                            errorDisplay()
+                            if(gamestate.notDone === true){
+                                requestAnimationFrame(gameloop)
+                            }
+                            else{
+                                console.log("no");
+                            }
+                        }
+                        let intervalId = setInterval(() =>{
+                            clearInterval(intervalId)
+                            gamestate.notDone = false;
+                            window.location.replace("https://google.com")
+                        }, 4000)                
+                        requestAnimationFrame(gameloop)
                         clearInterval(intervalId3);
                     }
 

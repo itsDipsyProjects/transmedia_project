@@ -1,3 +1,5 @@
+import { errorDisplay } from "./error.js";
+
 let namesUpperCase = ["Elliot", "Hugo", "Amelie", "Luna", "Jennifer", "Olivia" ];
 let namesLowerCase = ["elliot", "hugo", "amelie", "luna", "jennifer", "olivia" ];
 
@@ -31,18 +33,23 @@ async function who_do_you_know(namesUpperCase,namesLowerCase) {
             }
 
             if (wrongOrRight === 0) {
-                document.body.innerHTML = "";
-                document.body.innerHTML = `
-                    <video autoplay loop muted>
-                        <source src="./media/error.mp4" type="video/mp4">
-                        <!-- Add additional source elements for different video formats if needed -->
-                        Your browser does not support the video tag.
-                    </video>
-                `
-                setTimeout(() =>{
-                    window.location.replace("./index.html");
-
-                }, 2000)                
+                let gamestate = {notDone: true};
+                let container = document.querySelector("#container");
+                container.innerHTML = ``
+                function gameloop(){
+                    errorDisplay()
+                    if(gamestate.notDone === true){
+                        requestAnimationFrame(gameloop)
+                    }
+                    else{
+                        console.log("no");
+                    }
+                }
+                let intervalId = setInterval(() =>{
+                    clearInterval(intervalId)
+                    gamestate.notDone = false;
+                }, 4000)                
+                requestAnimationFrame(gameloop)
             }
             else{
               

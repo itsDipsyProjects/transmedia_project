@@ -256,7 +256,7 @@ export function quizFunctionality(){
                 if(radioBtn.checked){
                     let checkedLabel = document.querySelector('label[for="' + radioBtn.id + '"]').textContent;
                     
-                    if(checkedLabel === answer2 ){
+                    if(checkedLabel === answer3){
                         console.log("right");
                         window.location.replace("./finished/index.html")
                     }

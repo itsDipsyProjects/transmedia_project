@@ -1,5 +1,6 @@
 import { loadFirstPage } from "./index.js";
 
+
 export function initCanvas(){
     console.log(previousImage);
     const canvas = document.querySelector('canvas');
@@ -182,7 +183,9 @@ export function initCanvas(){
             audio2.pause();
         }
     });
+   
 }
+
 
 export function quizFunctionality(){
     let container = document.querySelector("#container");

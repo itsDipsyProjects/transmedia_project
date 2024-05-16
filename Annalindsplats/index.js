@@ -3,7 +3,6 @@ import { quizFunctionality } from "./canvas.js";
 
 
 export function loadFirstPage(){    
-    console.log(playClickCounter)
     let container = document.querySelector("#container");
     if(quizReady === true){
         container.innerHTML = `
@@ -11,7 +10,7 @@ export function loadFirstPage(){
 
             <div id="firstPart">
                 <img id="title" src="../media/cat.svg" alt="">
-                <canvas id="myCanvas" ></canvas>
+                <canvas id="myCanvas"></canvas>
                 <div id="to_quiz"></div>
             </div>
             <div id="secondPart">
@@ -33,7 +32,7 @@ export function loadFirstPage(){
 
         <div id="firstPart">
             <img id="title" src="../media/cat.svg" alt="">
-            <canvas id="myCanvas" ></canvas>
+            <canvas id="myCanvas"></canvas>
         </div>
         <div id="secondPart">
             <div id="container_for_cig_and_btn">

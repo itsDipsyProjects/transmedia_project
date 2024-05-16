@@ -1,8 +1,9 @@
 import { loadFirstPage } from "./index.js";
 
 export function initCanvas(){
+    console.log(previousImage);
     const canvas = document.querySelector('canvas');
-
+    
     // Get the 2D rendering context
     const ctx = canvas.getContext('2d');
     
@@ -13,10 +14,6 @@ export function initCanvas(){
     
     
     
-    const img1 = new Image();
-    
-    img1.src = "../media/player/notClicked.png";
-    
     
     const img2 = new Image();
     
@@ -26,6 +23,17 @@ export function initCanvas(){
     const img3 = new Image();
     
     img3.src = "../media/player/stopClicked.png";
+
+
+    const img4 = new Image();
+    
+    img4.src = "../media/player/record.png";
+
+
+    const img5 = new Image();
+    
+    img5.src = "../media/player/renew.png";
+
     
     const rectX = 79;
     const rectY = 227;
@@ -38,37 +46,24 @@ export function initCanvas(){
     const rectWidth2 = 50;
     const rectHeight2 = 70;
     
+
+    const rectX3 = 13;
+    const rectY3 = 227;
+    const rectWidth3 = 50;
+    const rectHeight3 = 70;
+
+    const rectX4 = 173;
+    const rectY4 = 227;
+    const rectWidth4 = 50;
+    const rectHeight4 = 70;
+
     
+    ctx.drawImage(previousImage,-20,-220)
     
     img1.onload = function() {
-
         
-        if(playClickCounter === 0){
-            ctx.drawImage(img1, -20, -220); 
-            
-            
-        }
+        ctx.drawImage(previousImage,-20,-220)
 
-
-        if(playClickCounter === 2){
-            ctx.drawImage(img2, -20, -220); 
-            
-
-        }
-
-        if(playClickCounter === 3){
-            ctx.drawImage(img3, -20, -220); 
-            
-       
-        }
-
-    
-     
-      
-    
-        
-        
-    
         canvas.addEventListener('click', function(event) {
 
             const x = event.offsetX;
@@ -76,11 +71,11 @@ export function initCanvas(){
             console.log(x);
             console.log(y);
             // Play Clicked
-            if ((x >= rectX && x <= rectX + rectWidth && y >= rectY && y <= rectY + rectHeight) && (playClickCounter === 0 || playClickCounter === 3)) {
+            if ((x >= rectX && x <= rectX + rectWidth && y >= rectY && y <= rectY + rectHeight)) {
                 ctx.clearRect(0,0,canvasWidth, canvasHeight)
                 ctx.drawImage(img2,-20,-220)
                 console.log("play");
-                
+                previousImage = img2;
                 
                 
                 audio.play();
@@ -93,22 +88,100 @@ export function initCanvas(){
                     quizFunctionality();
                 });
                 
-                playClickCounter = 2;
             }
     
             //Stop Clicked
-            if (x >= rectX2 && x <= rectX2 + rectWidth2 && y >= rectY2 && y <= rectY2 + rectHeight2 && playClickCounter === 2) {
+            if (x >= rectX2 && x <= rectX2 + rectWidth2 && y >= rectY2 && y <= rectY2 + rectHeight2) {
                 ctx.clearRect(0,0,canvasWidth, canvasHeight)
                 ctx.drawImage(img3,-20,-220)
-                
+                previousImage = img3;
                 
                 audio.play();
     
                 audio2.pause();
-                playClickCounter = 3;
+            }
+
+
+            if (x >= rectX3 && x <= rectX3 + rectWidth3 && y >= rectY3 && y <= rectY3 + rectHeight3) {
+                ctx.clearRect(0,0,canvasWidth, canvasHeight)
+                ctx.drawImage(img4,-20,-220)
+                previousImage = img4
+                
+                audio.play();
+    
+                audio2.pause();
+            }
+
+            if (x >= rectX4 && x <= rectX4 + rectWidth4 && y >= rectY4 && y <= rectY4 + rectHeight4) {
+                ctx.clearRect(0,0,canvasWidth, canvasHeight)
+                ctx.drawImage(img5,-20,-220)
+                previousImage = img5;
+                
+                audio.play();
+    
+                audio2.pause();
             }
         });
     };
+
+    canvas.addEventListener('click', function(event) {
+
+        const x = event.offsetX;
+        const y = event.offsetY;
+        console.log(x);
+        console.log(y);
+        // Play Clicked
+        if ((x >= rectX && x <= rectX + rectWidth && y >= rectY && y <= rectY + rectHeight)) {
+            ctx.clearRect(0,0,canvasWidth, canvasHeight)
+            ctx.drawImage(img2,-20,-220)
+            console.log("play");
+            previousImage = img2;
+            
+            
+            audio.play();
+            
+            audio2.play();
+
+            audio2.addEventListener('ended', function() {
+                quizReady = true;
+                console.log(quizReady);
+                quizFunctionality();
+            });
+            
+        }
+
+        //Stop Clicked
+        if (x >= rectX2 && x <= rectX2 + rectWidth2 && y >= rectY2 && y <= rectY2 + rectHeight2) {
+            ctx.clearRect(0,0,canvasWidth, canvasHeight)
+            ctx.drawImage(img3,-20,-220)
+            previousImage = img3;
+            
+            audio.play();
+
+            audio2.pause();
+        }
+
+
+        if (x >= rectX3 && x <= rectX3 + rectWidth3 && y >= rectY3 && y <= rectY3 + rectHeight3) {
+            ctx.clearRect(0,0,canvasWidth, canvasHeight)
+            ctx.drawImage(img4,-20,-220)
+            previousImage = img4
+            
+            audio.play();
+
+            audio2.pause();
+        }
+
+        if (x >= rectX4 && x <= rectX4 + rectWidth4 && y >= rectY4 && y <= rectY4 + rectHeight4) {
+            ctx.clearRect(0,0,canvasWidth, canvasHeight)
+            ctx.drawImage(img5,-20,-220)
+            previousImage = img5;
+            
+            audio.play();
+
+            audio2.pause();
+        }
+    });
 }
 
 export function quizFunctionality(){
@@ -117,7 +190,7 @@ export function quizFunctionality(){
         <div id="background"></div>
         <div id="firstPart">
             <img id="title" src="../media/cat.svg" alt="">
-            <canvas id="myCanvas" ></canvas>
+            <canvas id="myCanvas"></canvas>
         </div>
         <div id="secondPart">
             <div id="container_for_cig_and_btn">

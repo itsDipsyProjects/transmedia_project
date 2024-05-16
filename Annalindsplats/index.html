@@ -24,6 +24,13 @@
         let quizReady = false;
         let playClickCounter = 0;
         let quizDone = false;
+        
+        const img1 = new Image();
+        
+        img1.src = "../media/player/notClicked.png";
+        
+        let previousImage = img1;
+
         const audio = new Audio();
                 
         audio.src = "../sounds/clickSound.wav"; 

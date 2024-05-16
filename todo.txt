@@ -1,18 +1,15 @@
 BUGAR:
 
-1.Fixa så att drag and drop fungerar på mobilen
+1. fixa så att alla bilder är png och inte svg och mindre megabyte
+2. fixa så att man kan klicka alla knappar på och att roliga grejer händer 
 
 
+2.Fix a loading popup for images so that the app loads properly
 
-1.Fix a loading popup for images so that the app loads properly
-3.Fixa alla quiz frågor så att de är correcta
-
-    -Anna klar
-    -Vinter klar
-    -Kinesen klar
 
 
 4.Fixa css så att det är anpassat till de flesta mobil telephoner
+
 5.Fixa transisitons och animationer så att ser nice ut
 
 

@@ -74,7 +74,7 @@ export function loadFirstPage(){
                 </div>
                 <div id="arrows">
                     <div id="back_arrow">&#8592;</div>
-                    <div id="info_of_page">Page 1/3</div>
+                    <div id="info_of_page">Page 1/2</div>
                     <div id="next_arrow">&#8594;</div>
                 </div>
             </div>
@@ -92,7 +92,7 @@ export function loadFirstPage(){
 }
 
 function changePictures(){
-    let arrayOfPicturesPaths = ["./media/test3.png", "./media/test2.png", "./media/ebbas-hus.jpg"];
+    let arrayOfPicturesPaths = ["./pictures/första.jpg", "./pictures/andra.jpg", ];
     let nextBtn = document.querySelector("#next_arrow");
     let backBtn = document.querySelector("#back_arrow");
     let pictureDisplayDom = document.querySelector("#picture");
@@ -109,14 +109,14 @@ function changePictures(){
             incrementorForPageNumber++;
             console.log(incrementorForPictures)
             pictureDisplayDom.style.backgroundImage = `url(${arrayOfPicturesPaths[incrementorForPictures]})`;
-            infoOfPage.innerHTML = `Page ${incrementorForPageNumber}/3`    
+            infoOfPage.innerHTML = `Page ${incrementorForPageNumber}/2`    
         }
         else{
             console.log("now")
             incrementorForPictures = 0;
             incrementorForPageNumber = 1;
             pictureDisplayDom.style.backgroundImage = `url(${arrayOfPicturesPaths[incrementorForPictures]})`;
-            infoOfPage.innerHTML = `Page ${incrementorForPageNumber}/3`    
+            infoOfPage.innerHTML = `Page ${incrementorForPageNumber}/2`    
 
         }
     });
@@ -129,14 +129,14 @@ function changePictures(){
             incrementorForPageNumber--;
             console.log(incrementorForPictures)
             pictureDisplayDom.style.backgroundImage = `url(${arrayOfPicturesPaths[incrementorForPictures]})`;
-            infoOfPage.innerHTML = `Page ${incrementorForPageNumber}/3`    
+            infoOfPage.innerHTML = `Page ${incrementorForPageNumber}/2`    
         }
         else{
             console.log("now")
-            incrementorForPictures = 2;
-            incrementorForPageNumber = 3;
+            incrementorForPictures = 1;
+            incrementorForPageNumber = 2;
             pictureDisplayDom.style.backgroundImage = `url(${arrayOfPicturesPaths[incrementorForPictures]})`;
-            infoOfPage.innerHTML = `Page ${incrementorForPageNumber}/3`    
+            infoOfPage.innerHTML = `Page ${incrementorForPageNumber}/2`    
 
         }
     });

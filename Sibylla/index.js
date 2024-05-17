@@ -92,7 +92,7 @@ export function loadFirstPage(){
 }
 
 function changePictures(){
-    let arrayOfPicturesPaths = ["./media/test3.png", "./media/test2.png", "./media/ebbas-hus.jpg"];
+    let arrayOfPicturesPaths = ["./pictures/första.jpg", "./pictures/andra.jpg", "./pictures/tredje.jpg"];
     let nextBtn = document.querySelector("#next_arrow");
     let backBtn = document.querySelector("#back_arrow");
     let pictureDisplayDom = document.querySelector("#picture");

@@ -63,6 +63,11 @@ function clickAndDrop(){
 
 }
 
+let restartBtn = document.querySelector("#restart");
+restartBtn.addEventListener("click", () => {
+    window.location.reload();
+})
+
 function gameLoop() {
     // Update animation state
     let check = document.querySelectorAll(".droppable");

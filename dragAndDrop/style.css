@@ -16,7 +16,7 @@ body{
 #secretWord{
     display: flex;
     width: 100vw;
-    height: 500px;
+    height: 400px;
     justify-content: space-evenly;
     align-items: center;
    
@@ -52,3 +52,21 @@ h1{
     border: 1px solid greenyellow;
 }
 
+
+#restart_container{
+    width: 100vw;
+    height: 50px;
+    margin: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+#restart {
+    margin-right: 50px;
+    width: 80px;
+    height: 30px;
+    border: 1px solid yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

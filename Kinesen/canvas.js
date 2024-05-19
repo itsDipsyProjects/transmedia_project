@@ -1,5 +1,6 @@
 import { loadFirstPage } from "./index.js";
-
+import { sideAnimation } from "../utils.js";
+import { sideAnimation2 } from "../utils.js";
 
 
 export function initCanvas(){
@@ -149,7 +150,7 @@ export function initCanvas(){
                 
                 audio2.pause();
                 
-
+                sideAnimation();
             }
         });
     };
@@ -200,9 +201,9 @@ export function initCanvas(){
             
             audio2.pause();
 
-            let huhAudio = new Audio
-            huhAudio.src = "../media/huh.mp3"
-            huhAudio.play();
+            let huhAudio1 = new Audio
+            huhAudio1.src = "../media/huh.mp3"
+            huhAudio1.play();
 
         }
         // renew
@@ -215,9 +216,7 @@ export function initCanvas(){
 
             audio2.pause();
 
-            let huhAudio = new Audio
-            huhAudio.src = "../media/huh.mp3"
-            huhAudio.play();
+            sideAnimation2();
             
         }
         //load
@@ -230,10 +229,8 @@ export function initCanvas(){
             
             audio2.pause();
 
+            sideAnimation()
             
-            let rewindAudio = new Audio
-            rewindAudio.src = "../media/cassetRewind.mp3"
-            rewindAudio.play();
         }
     });
    

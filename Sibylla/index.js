@@ -58,9 +58,11 @@ export function loadFirstPage(){
         let titleDom = document.querySelector("#title")
         titleDom.addEventListener("click", () => {
             titleDom.style.transform = `rotate(360deg)`
-            setTimeout(() => {
+            let timeoutID = setTimeout(() => {
                 titleDom.style.transition = ''; // Re-enable transition
                 titleDom.style.transform = ''; // Reset transformation
+                clearTimeout(timeoutID);
+
             }, 2000); 
         })
 
@@ -105,9 +107,10 @@ export function loadFirstPage(){
         let titleDom = document.querySelector("#title")
         titleDom.addEventListener("click", () => {
             titleDom.style.transform = `rotate(360deg)`
-            setTimeout(() => {
+            let timeoutID = setTimeout(() => {
                 titleDom.style.transition = ''; // Re-enable transition
                 titleDom.style.transform = ''; // Reset transformation
+                clearTimeout(timeoutID);
             }, 2000); 
         })
         

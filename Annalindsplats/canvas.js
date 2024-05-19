@@ -170,6 +170,12 @@ export function initCanvas(){
             
             audio2.play();
 
+
+            audio2.addEventListener('ended', function() {
+                quizReady = true;
+                console.log(quizReady);
+                quizFunctionality();
+            });
             
         }
 

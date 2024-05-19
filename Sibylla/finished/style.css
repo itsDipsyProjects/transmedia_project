@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'tech';
+    src: url('../../media/ShareTechMono-Regular.ttf') format('truetype');
+}
+
+
 body{
     margin: 0px;
     background-color: black;
     width: 100vw;
     height: 100vh;
     color: green;
+    font-family: tech;
 }
 
 #container{
@@ -54,9 +61,4 @@ video{
 h1{
     margin-left: 20px;
     font-size: 30px;
-}
-
-video{
-    width: 100vw;
-    height: 100vh;
 }

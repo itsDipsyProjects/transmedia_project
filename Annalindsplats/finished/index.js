@@ -17,7 +17,7 @@ let bokstaver = ["s","l"];
 let intro_text_dom1 = document.querySelector("#text1");  
 let intro_text_dom2 = document.querySelector("#text2");  
 
-let intro_text_first = `Bra jobbat nu har du klarat första stationen här är dina första bokstaver`; 
+let intro_text_first = `Bra jobbat nu har du klarat första stationen här är dina första bokstäver`; 
 let intro_text_first2 = `Gå till Navigationsgatan 1B, För att ta dig vidare. Vi syns.`; 
 
 let arrayOfLettersInText1 = intro_text_first.split("")

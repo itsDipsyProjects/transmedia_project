@@ -190,17 +190,22 @@ export function initCanvas(){
             audio2.pause();
         }
 
-
+        // record
         if (x >= rectX3 && x <= rectX3 + rectWidth3 && y >= rectY3 && y <= rectY3 + rectHeight3) {
             ctx.clearRect(0,0,canvasWidth, canvasHeight)
             ctx.drawImage(img4,-20,-220)
             previousImage = img4
 
             audio.play();
-
+            
             audio2.pause();
-        }
 
+            let huhAudio = new Audio
+            huhAudio.src = "../media/huh.mp3"
+            huhAudio.play();
+
+        }
+        // renew
         if (x >= rectX4 && x <= rectX4 + rectWidth4 && y >= rectY4 && y <= rectY4 + rectHeight4) {
             ctx.clearRect(0,0,canvasWidth, canvasHeight)
             ctx.drawImage(img5,-20,-220)
@@ -209,8 +214,13 @@ export function initCanvas(){
             audio.play();
 
             audio2.pause();
-        }
 
+            let huhAudio = new Audio
+            huhAudio.src = "../media/huh.mp3"
+            huhAudio.play();
+            
+        }
+        //load
         if (x >= rectX5 && x <= rectX5 + rectWidth5 && y >= rectY5 && y <= rectY5 + rectHeight5) {
             ctx.clearRect(0,0,canvasWidth, canvasHeight)
             ctx.drawImage(img6,-20,-220)
@@ -219,10 +229,11 @@ export function initCanvas(){
             audio.play();
             
             audio2.pause();
+
             
-            
-           
-            
+            let rewindAudio = new Audio
+            rewindAudio.src = "../media/cassetRewind.mp3"
+            rewindAudio.play();
         }
     });
    

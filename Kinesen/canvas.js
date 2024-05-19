@@ -1,6 +1,7 @@
 import { loadFirstPage } from "./index.js";
 
 
+
 export function initCanvas(){
     console.log(previousImage);
     const canvas = document.querySelector('canvas');
@@ -67,6 +68,8 @@ export function initCanvas(){
     const rectWidth5 = 50;
     const rectHeight5 = 70;
 
+
+  
     
     ctx.drawImage(previousImage,-20,-220)
     
@@ -78,8 +81,7 @@ export function initCanvas(){
 
             const x = event.offsetX;
             const y = event.offsetY;
-            console.log(x);
-            console.log(y);
+           
             // Play Clicked
             if ((x >= rectX && x <= rectX + rectWidth && y >= rectY && y <= rectY + rectHeight)) {
                 ctx.clearRect(0,0,canvasWidth, canvasHeight)
@@ -87,7 +89,7 @@ export function initCanvas(){
                 console.log("play");
                 previousImage = img2;
                 
-                
+
                 audio.play();
                 
                 audio2.play();
@@ -105,7 +107,9 @@ export function initCanvas(){
                 ctx.clearRect(0,0,canvasWidth, canvasHeight)
                 ctx.drawImage(img3,-20,-220)
                 previousImage = img3;
-                
+
+
+
                 audio.play();
     
                 audio2.pause();
@@ -117,6 +121,7 @@ export function initCanvas(){
                 ctx.drawImage(img4,-20,-220)
                 previousImage = img4
                 
+
                 audio.play();
     
                 audio2.pause();
@@ -127,6 +132,8 @@ export function initCanvas(){
                 ctx.drawImage(img5,-20,-220)
                 previousImage = img5;
                 
+
+
                 audio.play();
     
                 audio2.pause();
@@ -136,10 +143,13 @@ export function initCanvas(){
                 ctx.clearRect(0,0,canvasWidth, canvasHeight)
                 ctx.drawImage(img6,-20,-220)
                 previousImage = img6;
+
                 
                 audio.play();
-    
+                
                 audio2.pause();
+                
+
             }
         });
     };
@@ -148,19 +158,18 @@ export function initCanvas(){
 
         const x = event.offsetX;
         const y = event.offsetY;
-        console.log(x);
-        console.log(y);
         // Play Clicked
         if ((x >= rectX && x <= rectX + rectWidth && y >= rectY && y <= rectY + rectHeight)) {
             ctx.clearRect(0,0,canvasWidth, canvasHeight)
             ctx.drawImage(img2,-20,-220)
             console.log("play");
             previousImage = img2;
-            
+
             
             audio.play();
             
             audio2.play();
+
 
             audio2.addEventListener('ended', function() {
                 quizReady = true;
@@ -175,41 +184,56 @@ export function initCanvas(){
             ctx.clearRect(0,0,canvasWidth, canvasHeight)
             ctx.drawImage(img3,-20,-220)
             previousImage = img3;
-            
+
             audio.play();
 
             audio2.pause();
         }
 
-
+        // record
         if (x >= rectX3 && x <= rectX3 + rectWidth3 && y >= rectY3 && y <= rectY3 + rectHeight3) {
             ctx.clearRect(0,0,canvasWidth, canvasHeight)
             ctx.drawImage(img4,-20,-220)
             previousImage = img4
-            
+
             audio.play();
-
+            
             audio2.pause();
-        }
 
+            let huhAudio = new Audio
+            huhAudio.src = "../media/huh.mp3"
+            huhAudio.play();
+
+        }
+        // renew
         if (x >= rectX4 && x <= rectX4 + rectWidth4 && y >= rectY4 && y <= rectY4 + rectHeight4) {
             ctx.clearRect(0,0,canvasWidth, canvasHeight)
             ctx.drawImage(img5,-20,-220)
             previousImage = img5;
-            
+
             audio.play();
 
             audio2.pause();
+
+            let huhAudio = new Audio
+            huhAudio.src = "../media/huh.mp3"
+            huhAudio.play();
+            
         }
-        
+        //load
         if (x >= rectX5 && x <= rectX5 + rectWidth5 && y >= rectY5 && y <= rectY5 + rectHeight5) {
             ctx.clearRect(0,0,canvasWidth, canvasHeight)
             ctx.drawImage(img6,-20,-220)
             previousImage = img6;
             
             audio.play();
-
+            
             audio2.pause();
+
+            
+            let rewindAudio = new Audio
+            rewindAudio.src = "../media/cassetRewind.mp3"
+            rewindAudio.play();
         }
     });
    

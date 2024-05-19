@@ -37,8 +37,8 @@ input{
     background-size: cover; 
 }
 #to_bilder{
-    width: 150px;
-    height: 120px;
+    width: 160px;
+    height: 140px;
     margin-top: 0px;
     background-image: url("../media/to_bilder.png");
     background-position: center;

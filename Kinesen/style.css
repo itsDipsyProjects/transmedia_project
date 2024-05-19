@@ -1,6 +1,7 @@
 body{
     margin: 0;
     background-color: #B9B8B6  ;
+    overflow-x: hidden;
 }
 canvas{
     width: 300px;
@@ -9,8 +10,7 @@ canvas{
 #back{
     width: 250px;
     height: 50px;
-    margin-top: 0px;
-    background-image: url("../media/cable.svg");
+    background-image: url("../media/cable.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -40,7 +40,7 @@ input{
     width: 150px;
     height: 120px;
     margin-top: 0px;
-    background-image: url("../media/to_bilder.svg");
+    background-image: url("../media/to_bilder.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,7 +52,7 @@ input{
     margin-top: 200px;
     width: 150px;
     height: 150px;
-    background-image: url("../media/quiz.svg");
+    background-image: url("../media/quiz.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -70,6 +70,7 @@ input{
     height: 100vh;
     align-items: center;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 #firstPart{
@@ -93,13 +94,15 @@ input{
     height: 100px;
     margin-bottom: 50px;
     transition: transform 2s;
-
 }
 
+
+
+
 #cigarets{
-    width: 150px;
+    width: 210px;
     height: 300px;
-    background-image: url("../media/cigaretts.svg");
+    background-image: url("../media/cigaretts.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -295,7 +298,6 @@ h1{
     margin-left: 20px;
     font-size: 30px;
 }
-
 
 @keyframes flyDown {
     0% {

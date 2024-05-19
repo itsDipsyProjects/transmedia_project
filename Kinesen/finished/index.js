@@ -29,9 +29,15 @@ let intervalId1 = setInterval(() => {
             } else {
                 clearInterval(intervalId2);
                 wait_before_intro_is_done = true;   
-                if(wait_before_intro_is_done === true){
-                    window.location.replace("../../dragAndDrop/index.html");
-                }
+                let intervalId3 = setInterval(() =>{
+
+                    if(wait_before_intro_is_done === true){
+                        window.location.replace("../../dragAndDrop/index.html");
+                        clearInterval(intervalId3)
+                    }
+
+
+                },3000)
             }
         },100)
     }

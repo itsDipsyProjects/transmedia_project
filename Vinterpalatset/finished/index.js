@@ -4,8 +4,8 @@ let intro_text_dom1 = document.querySelector("#text1");
 console.log(intro_text_dom1);
 let intro_text_dom2 = document.querySelector("#text2");  
 
-let intro_text_first = `Bra jobbat nu har du klarat första stationen`; 
-let intro_text_first2 = `Gå till ..... För att ta dig vidare. Vi syns`; 
+let intro_text_first = `Bra jobbat nu har du klarat Andra stationen Här din bokstav`; 
+let intro_text_first2 = `Gå till För att ta dig vidare. Vi syns`; 
 
 let arrayOfLettersInText1 = intro_text_first.split("")
 console.log(arrayOfLettersInText1);
@@ -29,9 +29,13 @@ let intervalId1 = setInterval(() => {
             } else {
                 clearInterval(intervalId2);
                 wait_before_intro_is_done = true;   
-                if(wait_before_intro_is_done === true){
-                    window.location.replace("https://open.spotify.com/playlist/1F6lGvjsOpVMxuJR03ub2T?si=3291c7f048104395&pt=1a8843e4078d61c17867d19616fc4789");
-                }
+                let intervalId3 = setInterval(() =>{
+                    if(wait_before_intro_is_done === true){
+                        window.location.replace("https://open.spotify.com/playlist/1F6lGvjsOpVMxuJR03ub2T?si=3291c7f048104395&pt=1a8843e4078d61c17867d19616fc4789");
+                        clearInterval(intervalId3);
+                    }
+
+                }, 4000)
             }
         },100)
     }

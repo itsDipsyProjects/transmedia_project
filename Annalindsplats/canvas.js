@@ -1,5 +1,5 @@
 import { loadFirstPage } from "./index.js";
-
+import { sideAnimation } from "../utils.js";
 
 
 export function initCanvas(){
@@ -149,7 +149,7 @@ export function initCanvas(){
                 
                 audio2.pause();
                 
-
+                sideAnimation();
             }
         });
     };
@@ -215,6 +215,7 @@ export function initCanvas(){
 
             audio2.pause();
 
+
             
         }
         //load
@@ -227,7 +228,7 @@ export function initCanvas(){
             
             audio2.pause();
 
-            
+            sideAnimation();
             
         }
     });

@@ -310,3 +310,16 @@ h1{
 .animated {
     animation: flyDown 2s linear forwards;
 }
+
+
+@keyframes fromSide {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(1000px);
+    }
+}
+.animated2 {
+    animation: fromSide 5s linear forwards;
+}

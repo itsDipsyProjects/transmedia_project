@@ -27,3 +27,35 @@ export function cigAnimation() {
         clearInterval(intervalId)
     },2000)
 }
+
+
+export function sideAnimation() {
+
+    let sideDom = document.createElement("div");
+
+    const windowWidth = window.innerWidth;
+    const elementWidth = 200; 
+
+
+    sideDom.style.cssText = `
+        width: 200px;
+        height: 200px;
+        background-image: url("./load.gif");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: flex;
+        position: absolute;
+        top:580px;
+        left: ${-100}px;
+        z-index: 200;
+    `;
+    let container = document.querySelector("#container");
+    sideDom.classList.add('animated2');
+
+    container.appendChild(sideDom);
+    let intervalId = setInterval(() => {
+       sideDom.remove();
+        clearInterval(intervalId)
+    },5000)
+}

@@ -92,6 +92,8 @@ input{
     margin-top: 90px;
     height: 100px;
     margin-bottom: 50px;
+    transition: transform 2s;
+
 }
 
 #cigarets{
@@ -292,4 +294,17 @@ input{
 h1{
     margin-left: 20px;
     font-size: 30px;
+}
+
+
+@keyframes flyDown {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(1000px) rotate(360deg);
+    }
+}
+.animated {
+    animation: flyDown 2s linear forwards;
 }

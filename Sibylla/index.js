@@ -1,6 +1,6 @@
 import { initCanvas } from "./canvas.js";
 import { quizFunctionality } from "./canvas.js";
-
+import {cigAnimation} from "../utils.js"
 
 export function loadFirstPage(){    
     console.log(playClickCounter)
@@ -26,6 +26,15 @@ export function loadFirstPage(){
     
         `;
 
+        let titleDom = document.querySelector("#title")
+        titleDom.addEventListener("click", () => {
+            titleDom.style.transform = `rotate(360deg)`
+            setTimeout(() => {
+                titleDom.style.transition = ''; // Re-enable transition
+                titleDom.style.transform = ''; // Reset transformation
+            }, 2000); 
+        })
+
     }
     else{
         container.innerHTML = `
@@ -46,6 +55,19 @@ export function loadFirstPage(){
 
 
     `;
+        let titleDom = document.querySelector("#title")
+        titleDom.addEventListener("click", () => {
+            titleDom.style.transform = `rotate(360deg)`
+            setTimeout(() => {
+                titleDom.style.transition = ''; // Re-enable transition
+                titleDom.style.transform = ''; // Reset transformation
+            }, 2000); 
+        })
+
+        let cigarets = document.querySelector("#cigarets")
+        cigarets.addEventListener("click", () => {
+            cigAnimation();
+        })
 
     }
     initCanvas();
@@ -79,6 +101,16 @@ export function loadFirstPage(){
                 </div>
             </div>
         `;
+
+        let titleDom = document.querySelector("#title")
+        titleDom.addEventListener("click", () => {
+            titleDom.style.transform = `rotate(360deg)`
+            setTimeout(() => {
+                titleDom.style.transition = ''; // Re-enable transition
+                titleDom.style.transform = ''; // Reset transformation
+            }, 2000); 
+        })
+        
         let back_btn = btn_to_bilder;
         back_btn.id = "back";
 

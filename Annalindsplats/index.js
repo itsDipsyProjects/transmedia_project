@@ -1,30 +1,39 @@
 import { initCanvas } from "./canvas.js";
 import { quizFunctionality } from "./canvas.js";
+import { cigAnimation } from "../utils.js";
 
-
-export function loadFirstPage(){    
+export function loadFirstPage(){  
     let container = document.querySelector("#container");
     if(quizReady === true){
         container.innerHTML = `
-            <div id="background"></div>
-
-            <div id="firstPart">
-                <img id="title" src="../media/cat.svg" alt="">
-                <canvas id="myCanvas"></canvas>
-                <div id="to_quiz"></div>
-            </div>
-            <div id="secondPart">
-                <div id="container_for_cig_and_btn">
-                    <div id="cigarets"></div>
-                    <div id="container_for_btn">
-                        <div id="to_bilder"></div>
-                    </div>
-                </div>
-            </div>
-    
-    
+        <div id="background"></div>
+        
+        <div id="firstPart">
+        <img id="title" src="../media/cat.svg" alt="">
+        <canvas id="myCanvas"></canvas>
+        <div id="to_quiz"></div>
+        </div>
+        <div id="secondPart">
+        <div id="container_for_cig_and_btn">
+        <div id="cigarets"></div>
+        <div id="container_for_btn">
+        <div id="to_bilder"></div>
+        </div>
+        </div>
+        </div>
+        
+        
         `;
 
+        let titleDom = document.querySelector("#title")
+        titleDom.addEventListener("click", () => {
+            titleDom.style.transform = `rotate(360deg)`
+            setTimeout(() => {
+                titleDom.style.transition = ''; // Re-enable transition
+                titleDom.style.transform = ''; // Reset transformation
+            }, 2000); 
+        })
+        
     }
     else{
         container.innerHTML = `
@@ -45,7 +54,20 @@ export function loadFirstPage(){
 
 
     `;
+    
+        let cigarets = document.querySelector("#cigarets")
+        cigarets.addEventListener("click", () => {
+            cigAnimation();
+        })
 
+        let titleDom = document.querySelector("#title")
+        titleDom.addEventListener("click", () => {
+            titleDom.style.transform = `rotate(360deg)`
+            setTimeout(() => {
+                titleDom.style.transition = ''; // Re-enable transition
+                titleDom.style.transform = ''; // Reset transformation
+            }, 2000); 
+        })
     }
     initCanvas();
 
@@ -78,6 +100,16 @@ export function loadFirstPage(){
                 </div>
             </div>
         `;
+
+        let titleDom = document.querySelector("#title")
+        titleDom.addEventListener("click", () => {
+            titleDom.style.transform = `rotate(360deg)`
+            setTimeout(() => {
+                titleDom.style.transition = ''; // Re-enable transition
+                titleDom.style.transform = ''; // Reset transformation
+            }, 2000); 
+        })
+        
         let back_btn = btn_to_bilder;
         back_btn.id = "back";
 

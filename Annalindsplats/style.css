@@ -321,5 +321,9 @@ h1{
     }
 }
 .animated2 {
-    animation: fromSide 5s linear forwards;
+    animation: fromSide 8s linear forwards;
+}
+
+.animated3 {
+    animation: fromSide 8s linear forwards;
 }

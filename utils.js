@@ -31,48 +31,47 @@ export function cigAnimation() {
 
 export function sideAnimation() {
 
-    let bikeGif = new Image
-    bikeGif.src = "./bike.gif"
-    bikeGif.onload(() => {
-        let sideDom = document.createElement("div");
+    
 
-        sideDom.style.cssText = `
-            width: 200px;
-            height: 200px;
-            background-image: url("./load.gif");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            display: flex;
-            position: absolute;
-            top:580px;
-            left: ${-100}px;
-            z-index: 200;
-        `;
-        let container = document.querySelector("#container");
-        sideDom.classList.add('animated2');
+    let sideDom = document.createElement("div");
 
-        container.appendChild(sideDom);
-        let intervalId = setInterval(() => {
-            sideDom.remove();
-            clearInterval(intervalId)
-        },5000)
-    })
+
+    sideDom.style.cssText = `
+        width: 200px;
+        height: 200px;
+        background-image: url("./load.gif");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: flex;
+        position: absolute;
+        top:580px;
+        left: ${-100}px;
+        z-index: 200;
+    `;
+    let container = document.querySelector("#container");
+    sideDom.classList.add('animated2');
+
+    container.appendChild(sideDom);
+    let intervalId = setInterval(() => {
+       sideDom.remove();
+        clearInterval(intervalId)
+    },5000)
 }
 
 
 export function sideAnimation2() {
 
-    let skateGif = new Image
-    skateGif.src = "./load.gif"
-    skateGif.onload(() => {
+    let bikeGif = new Image
+    bikeGif.src = "./bike.gif"
+    bikeGif.onload(() => {
         let sideDom = document.createElement("div");
     
     
         sideDom.style.cssText = `
             width: 200px;
             height: 200px;
-            background-image: url(${skateGif});
+            background-image: url(${bikeGif});
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;

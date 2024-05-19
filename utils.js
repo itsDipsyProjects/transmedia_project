@@ -31,8 +31,6 @@ export function cigAnimation() {
 
 export function sideAnimation() {
 
-    
-
     let sideDom = document.createElement("div");
 
 
@@ -62,33 +60,28 @@ export function sideAnimation() {
 
 export function sideAnimation2() {
 
-    let bikeGif = new Image
-    bikeGif.src = "./bike.gif"
-    bikeGif.onload(() => {
-        let sideDom = document.createElement("div");
-    
-    
-        sideDom.style.cssText = `
-            width: 200px;
-            height: 200px;
-            background-image: url(${bikeGif});
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            display: flex;
-            position: absolute;
-            bottom: 500px;
-            left: ${-100}px;
-            z-index: 200;
-        `;
-        let container = document.querySelector("#container");
-        sideDom.classList.add('animated3');
-    
-        container.appendChild(sideDom);
-        let intervalId = setInterval(() => {
-           sideDom.remove();
-            clearInterval(intervalId)
-        },8000)
+    let sideDom = document.createElement("div");
 
-    })
+
+    sideDom.style.cssText = `
+        width: 200px;
+        height: 200px;
+        background-image: url("./bike.gif");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: flex;
+        position: absolute;
+        bottom: 500px;
+        left: ${-100}px;
+        z-index: 200;
+    `;
+    let container = document.querySelector("#container");
+    sideDom.classList.add('animated3');
+
+    container.appendChild(sideDom);
+    let intervalId = setInterval(() => {
+       sideDom.remove();
+        clearInterval(intervalId)
+    },8000)
 }

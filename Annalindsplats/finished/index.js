@@ -1,11 +1,12 @@
 function getCharacterAnimation(bokstaver){
-    let characterContainerDom = document.createElement("div");
-    characterContainerDom.id = "showChars";
+    
 
+    let container = document.querySelector("#showchars")
     bokstaver.forEach(element => {
         let characterDom = document.createElement("div");
         characterDom.classList.add("a_char");
         characterDom.innerHTML = `${element}`;
+        container.appendChild(characterDom)
     });
 
     
@@ -33,6 +34,7 @@ let intervalId1 = setInterval(() => {
         intro_text_dom1.innerHTML += arrayOfLettersInText1[i];
         i++;
     } else {
+        getCharacterAnimation(bokstaver);
         clearInterval(intervalId1);
         let intervalId2 = setInterval(() =>{
             if (j < arrayOfLettersInText2.length) {

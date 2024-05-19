@@ -1,10 +1,24 @@
 
+function getCharacterAnimation(bokstaver){
+    
 
+    let container = document.querySelector("#showchars")
+    bokstaver.forEach(element => {
+        let characterDom = document.createElement("div");
+        characterDom.classList.add("a_char");
+        characterDom.innerHTML = `${element}`;
+        container.appendChild(characterDom)
+    });
+
+    
+}
+
+let bokstaver = ["a","l"];
 let intro_text_dom1 = document.querySelector("#text1");  
 console.log(intro_text_dom1);
 let intro_text_dom2 = document.querySelector("#text2");  
 
-let intro_text_first = `Bra jobbat nu har du klarat Andra stationen Här din bokstav`; 
+let intro_text_first = `Bra jobbat nu har du klarat Andra stationen här är några fler bokstaver`; 
 let intro_text_first2 = `Gå till August Palms plats 1, För att ta dig vidare. Vi syns`; 
 
 let arrayOfLettersInText1 = intro_text_first.split("")
@@ -27,6 +41,7 @@ let intervalId1 = setInterval(() => {
                 intro_text_dom2.innerHTML += arrayOfLettersInText2[j];
                 j++;
             } else {
+                getCharacterAnimation();
                 clearInterval(intervalId2);
                 wait_before_intro_is_done = true;   
                 let intervalId3 = setInterval(() =>{

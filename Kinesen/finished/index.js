@@ -1,10 +1,24 @@
+function getCharacterAnimation(bokstaver){
+    
 
+    let container = document.querySelector("#showchars")
+    bokstaver.forEach(element => {
+        let characterDom = document.createElement("div");
+        characterDom.classList.add("a_char");
+        characterDom.innerHTML = `${element}`;
+        container.appendChild(characterDom)
+    });
+
+    
+}
+
+let bokstaver = ["i","l","b"];
 
 let intro_text_dom1 = document.querySelector("#text1");  
 console.log(intro_text_dom1);
 let intro_text_dom2 = document.querySelector("#text2");  
 
-let intro_text_first = `Bra jobbat nu är du nästan framme.`; 
+let intro_text_first = `Bra jobbat nu är du nästan framme. Här är dina sista bokstäver`; 
 let intro_text_first2 = `Innan du får höra sista biten så måste du lösa något åt oss...`; 
 
 let arrayOfLettersInText1 = intro_text_first.split("")
@@ -27,6 +41,7 @@ let intervalId1 = setInterval(() => {
                 intro_text_dom2.innerHTML += arrayOfLettersInText2[j];
                 j++;
             } else {
+                getCharacterAnimation();
                 clearInterval(intervalId2);
                 wait_before_intro_is_done = true;   
                 let intervalId3 = setInterval(() =>{

@@ -13,7 +13,7 @@ function getCharacterAnimation(bokstaver){
     
 }
 
-let bokstaver = ["a","l"];
+let bokstaver = ["a","l","y"];
 let intro_text_dom1 = document.querySelector("#text1");  
 console.log(intro_text_dom1);
 let intro_text_dom2 = document.querySelector("#text2");  

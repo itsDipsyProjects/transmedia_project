@@ -5,7 +5,7 @@ console.log(intro_text_dom1);
 let intro_text_dom2 = document.querySelector("#text2");  
 
 let intro_text_first = `Bra jobbat nu har du klarat Andra stationen Här din bokstav`; 
-let intro_text_first2 = `Gå till För att ta dig vidare. Vi syns`; 
+let intro_text_first2 = `Gå till August Palms plats 1, För att ta dig vidare. Vi syns`; 
 
 let arrayOfLettersInText1 = intro_text_first.split("")
 console.log(arrayOfLettersInText1);

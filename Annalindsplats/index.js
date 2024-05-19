@@ -61,6 +61,7 @@ export function loadFirstPage(){
     }
 
     btn_to_bilder.addEventListener("click", () => {
+        scaryAudio.pause();
         firstPartDom.innerHTML = `
             <img id="title" src="../media/cat.svg" alt="">
             <div id="windows_container">

@@ -1,6 +1,7 @@
 import { loadFirstPage } from "./index.js";
 
 
+
 export function initCanvas(){
     console.log(previousImage);
     const canvas = document.querySelector('canvas');
@@ -35,6 +36,10 @@ export function initCanvas(){
     
     img5.src = "../media/player/renew.png";
 
+    const img6 = new Image();
+    
+    img6.src = "../media/player/load.png";
+
     
     const rectX = 79;
     const rectY = 227;
@@ -58,6 +63,13 @@ export function initCanvas(){
     const rectWidth4 = 50;
     const rectHeight4 = 70;
 
+    const rectX5 = 223;
+    const rectY5 = 227;
+    const rectWidth5 = 50;
+    const rectHeight5 = 70;
+
+
+  
     
     ctx.drawImage(previousImage,-20,-220)
     
@@ -78,7 +90,8 @@ export function initCanvas(){
                 console.log("play");
                 previousImage = img2;
                 
-                
+                scaryAudio.pause();
+
                 audio.play();
                 
                 audio2.play();
@@ -96,7 +109,10 @@ export function initCanvas(){
                 ctx.clearRect(0,0,canvasWidth, canvasHeight)
                 ctx.drawImage(img3,-20,-220)
                 previousImage = img3;
-                
+
+                scaryAudio.pause();
+
+
                 audio.play();
     
                 audio2.pause();
@@ -108,6 +124,8 @@ export function initCanvas(){
                 ctx.drawImage(img4,-20,-220)
                 previousImage = img4
                 
+                scaryAudio.pause();
+
                 audio.play();
     
                 audio2.pause();
@@ -118,9 +136,29 @@ export function initCanvas(){
                 ctx.drawImage(img5,-20,-220)
                 previousImage = img5;
                 
+                scaryAudio.pause();
+
                 audio.play();
     
                 audio2.pause();
+            }
+
+            if (x >= rectX5 && x <= rectX5 + rectWidth5 && y >= rectY5 && y <= rectY5 + rectHeight5) {
+                ctx.clearRect(0,0,canvasWidth, canvasHeight)
+                ctx.drawImage(img6,-20,-220)
+                previousImage = img6;
+                scaryAudio.pause();
+                
+                audio.play();
+                
+                audio2.pause();
+                
+                scaryAudio.play();
+
+                let intervalId = setInterval(() => {
+                    clearInterval(intervalId);
+                    window.location.replace("./inteHit/index.html")
+                }, 1000)
             }
         });
     };
@@ -137,7 +175,8 @@ export function initCanvas(){
             ctx.drawImage(img2,-20,-220)
             console.log("play");
             previousImage = img2;
-            
+            scaryAudio.pause();
+
             
             audio.play();
             
@@ -156,7 +195,8 @@ export function initCanvas(){
             ctx.clearRect(0,0,canvasWidth, canvasHeight)
             ctx.drawImage(img3,-20,-220)
             previousImage = img3;
-            
+            scaryAudio.pause();
+
             audio.play();
 
             audio2.pause();
@@ -167,7 +207,8 @@ export function initCanvas(){
             ctx.clearRect(0,0,canvasWidth, canvasHeight)
             ctx.drawImage(img4,-20,-220)
             previousImage = img4
-            
+            scaryAudio.pause();
+
             audio.play();
 
             audio2.pause();
@@ -177,10 +218,27 @@ export function initCanvas(){
             ctx.clearRect(0,0,canvasWidth, canvasHeight)
             ctx.drawImage(img5,-20,-220)
             previousImage = img5;
-            
+            scaryAudio.pause();
+
             audio.play();
 
             audio2.pause();
+        }
+
+        if (x >= rectX5 && x <= rectX5 + rectWidth5 && y >= rectY5 && y <= rectY5 + rectHeight5) {
+            ctx.clearRect(0,0,canvasWidth, canvasHeight)
+            ctx.drawImage(img6,-20,-220)
+            previousImage = img6;
+            scaryAudio.pause();
+            
+            audio.play();
+            
+            audio2.pause();
+            
+            scaryAudio.play();
+            
+        
+            
         }
     });
    

@@ -1,7 +1,22 @@
+function getCharacterAnimation(bokstaver){
+    let characterContainerDom = document.createElement("div");
+    characterContainerDom.id = "showChars";
+
+    bokstaver.forEach(element => {
+        let characterDom = document.createElement("div");
+        characterDom.classList.add("a_char");
+        characterDom.innerHTML = `${element}`;
+    });
+
+    
+}
+
+let bokstaver = ["s","l"];
+
 let intro_text_dom1 = document.querySelector("#text1");  
 let intro_text_dom2 = document.querySelector("#text2");  
 
-let intro_text_first = `Bra jobbat nu har du klarat första stationen här är din första bokstav`; 
+let intro_text_first = `Bra jobbat nu har du klarat första stationen här är dina första bokstaver`; 
 let intro_text_first2 = `Gå till Navigationsgatan 1B, För att ta dig vidare. Vi syns.`; 
 
 let arrayOfLettersInText1 = intro_text_first.split("")

@@ -48,7 +48,7 @@ let intervalId1 = setInterval(() => {
                         let intervalId = setInterval(() =>{
                             clearInterval(intervalId)
                             gamestate.notDone = false;
-                            window.location.replace("https://google.com")
+                            window.location.replace("https://docs.google.com/forms/d/e/1FAIpQLSfaOdlCJnmNUcuDBQenWEnGjs-k16_ayAmJTSUxz8Za6yM1gQ/viewform")
                         }, 4000)                
                         requestAnimationFrame(gameloop)
                         clearInterval(intervalId3);

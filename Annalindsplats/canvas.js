@@ -171,8 +171,18 @@ export function initCanvas(){
             
             audio2.play();
 
+            let intervalID = setInterval(()=>{
+                quizReady = true;
+                console.log(quizReady);
+                clearInterval(intervalID);
+                audio2.pause();
+                quizFunctionality();
+                
+            },8000)
+
 
             audio2.addEventListener('ended', function() {
+
                 quizReady = true;
                 console.log(quizReady);
                 quizFunctionality();
